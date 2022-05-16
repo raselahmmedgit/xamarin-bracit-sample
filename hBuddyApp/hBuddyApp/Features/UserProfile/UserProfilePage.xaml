@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:hBuddyApp.Features.UserProfile"
+    x:Class="hBuddyApp.Features.UserProfile.UserProfilePage"
+    xmlns:userProfileCard="clr-namespace:hBuddyApp.Features.UserProfile.Components.UserStatusCard"
+    xmlns:resources="clr-namespace:hBuddyApp.Features.UserProfile.Resources;assembly=hBuddyApp"
+    xmlns:changeStatus="clr-namespace:hBuddyApp.Features.UserProfile.Components.ChangeStatus;assembly=hBuddyApp"
+    xmlns:encryptionStatus="clr-namespace:hBuddyApp.Features.UserProfile.Components.EncryptionStatus;assembly=hBuddyApp"
+    xmlns:healthStatusAdvice="clr-namespace:hBuddyApp.Features.UserProfile.Components.HealthStatusAdvice;assembly=hBuddyApp"
+    xmlns:bluetoothReminder="clr-namespace:hBuddyApp.Features.UserProfile.Components.BluetoothReminder;assembly=hBuddyApp"
+    xmlns:controls="clr-namespace:hBuddyApp.Features.Controls"
+    xmlns:components="clr-namespace:hBuddyApp.Features.ComponentsManagement"
+    xmlns:local="clr-namespace:hBuddyApp.Features.UserProfile"
+    Title="{x:Static resources:Localization.UserProfile_Title_Text}"
+    IconImageSource="{StaticResource IconTabProfile}"
+    Style="{StaticResource RootStandalonePageStyle}">
+    <ContentPage.Content>
+        <Grid x:DataType="local:UserProfileViewModel"
+              RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ContentView
+                x:Name="Header"
+                Style="{StaticResource PageHeaderStyle}">
+                <Label Text="{x:Static resources:Localization.UserProfile_Title_Text}"
+                       Style="{StaticResource TextPageTitleStyle}"/>
+            </ContentView>
+            <BoxView Grid.Row="1"
+                     Style="{StaticResource SeparatorStyle}"/>
+
+            <StackLayout Orientation="Vertical"
+                        Style="{StaticResource ContentContainerVariant2Style}"
+                        Padding="0"
+                        Grid.Row="2"
+                        HorizontalOptions="FillAndExpand">
+                <components:ComponentsHost
+                    RegionManager="{Binding UserProfileRegion}"
+                    BackgroundColor="Transparent"/>
+
+            </StackLayout>
+
+            <controls:BusyIndicatorView Grid.Row="2"
+                                        FadeBackground="True"
+                                        IsActive="{Binding IsBusy}"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

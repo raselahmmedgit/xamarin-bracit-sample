@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+      <Authors>Schema Plug</Authors>
+      <Owners>Schema Plug</Owners>
+      <Copyright>Schema Plug</Copyright>
+      <LangVersion>latestmajor</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+      <XamarinFormsVersion>4.8.0.1269</XamarinFormsVersion>
+      <PrismVersion>7.2.0.1054</PrismVersion>
+  </PropertyGroup>
+
+</Project>
