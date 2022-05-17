@@ -92,9 +92,6 @@
     <Reference Include="System.Numerics.Vectors" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="Mobile.BuildTools.Configuration">
-      <HintPath>..\hBuddyApp.iOS\bin\iPhoneSimulator\Debug\Mobile.BuildTools.Configuration.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LiteDB">
@@ -108,6 +105,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Debug">
       <Version>3.1.7</Version>
+    </PackageReference>
+    <PackageReference Include="Mobile.BuildTools.Configuration">
+      <Version>2.0.245</Version>
     </PackageReference>
     <PackageReference Include="Plugin.FirebasePushNotification">
       <Version>3.4.1</Version>
