@@ -187,8 +187,8 @@
     <Compile Include="Services\CloseApplication.cs" />
     <Compile Include="Services\FirebaseRemoteConfigurationService.cs" />
     <Compile Include="Services\Http\NativeHttpClientHandlerProvider.cs" />
-    <Compile Include="SplashActivity.cs" />
     <Compile Include="Services\Log\AppCenterLogProvider.cs" />
+    <Compile Include="SplashActivity.cs" />
     <Compile Include="Configuration\DroidConfiguration.cs" />
     <Compile Include="CustomRenderers\CustomNavigationPageRenderer.cs" />
     <Compile Include="CustomRenderers\ExtendedTabbedPageRenderer.cs" />

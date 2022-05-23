@@ -272,7 +272,6 @@
     <Compile Include="Services\CloseApplication.cs" />
     <Compile Include="Services\FirebaseRemoteConfigurationService.cs" />
     <Compile Include="Services\Http\NativeHttpClientHandlerProvider.cs" />
-    <Compile Include="Services\Log\AppCenterLogProvider.cs" />
     <Compile Include="CustomRenderers\CustomNavigationPageRenderer.cs" />
     <Compile Include="Configuration\iOSConfiguration.cs" />
     <Compile Include="Effects\SafeAreaPaddingEffect.cs" />
@@ -285,6 +284,7 @@
     <Compile Include="PlatformSpecific\StatusBarStyle.cs" />
     <Compile Include="CustomRenderers\ExtendedTabbedPageRenderer.cs" />
     <Compile Include="Features\PushNotifications\PushNotificationPermissions.cs" />
+    <Compile Include="Services\Log\AppCenterLogProvider.cs" />
     <Compile Include="Utils\NSDictionaryExtensions.cs" />
     <Compile Include="Effects\SafeAreaPaddingNoBottomEffect.cs" />
     <ImageAsset Include="Assets.xcassets\rumors_icon.imageset\Contents.json">
