@@ -200,7 +200,7 @@
     <Compile Include="CustomRenderers\ExtendedListViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="..\Covi\Resources\Fonts\fa-solid-900.ttf">
+    <AndroidAsset Include="..\hBuddyApp\Resources\Fonts\fa-solid-900.ttf">
       <Link>Assets\fa-solid-900.ttf</Link>
     </AndroidAsset>
     <None Include="Resources\AboutResources.txt" />
@@ -540,6 +540,6 @@
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
-    <CodeAnalysisRuleSet>$(SolutionDir)\Covi.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>$(SolutionDir)\hBuddyApp.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
 </Project>
