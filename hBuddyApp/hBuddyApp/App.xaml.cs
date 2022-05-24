@@ -122,7 +122,7 @@ namespace hBuddyApp
 
                 var mediator = this.Container.Resolve<IMediator>();
                 await mediator.Send(new AppInitializedAction());
-                await mediator.Publish(new AppInitializedNotification());
+                //await mediator.Publish(new AppInitializedNotification());
 
                 IsInitialized = true;
 

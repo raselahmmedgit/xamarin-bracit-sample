@@ -20,7 +20,7 @@ namespace hBuddyApp.Services.ApplicationMetadata
 {
     public static class MetadataTriggers
     {
-        public static Type FetchMetadataOnAppInitializedActionHandler { get; } = typeof(FetchMetadataOnAppInitializedActionHandler);
+        //public static Type FetchMetadataOnAppInitializedActionHandler { get; } = typeof(FetchMetadataOnAppInitializedActionHandler);
 
         public static Type ForceFetchMetadataActionHandler { get; } = typeof(FetchMetadataActionHandler);
     }

@@ -70,6 +70,8 @@
     <Compile Remove="Features\Rumours\Components\RestrictedRumours.xaml.cs" />
     <Compile Remove="Features\SettingsChangeLanguage\Actions\AcceptInitialSettingsLanguageAction.cs" />
     <Compile Remove="Features\SettingsChangeLanguage\Actions\AcceptInitialSettingsLanguageActionHandler.cs" />
+    <Compile Remove="Services\Actions\AppInitializedNotification.cs" />
+    <Compile Remove="Services\ApplicationMetadata\Actions\FetchMetadataOnAppInitializedActionHandler.cs" />
     <Compile Remove="Services\ErrorHandlers\ExpiredTokenErrorHandler.cs" />
     <EmbeddedResource Remove="Features\Polls\PollsChatView.xaml" />
     <EmbeddedResource Remove="Features\Polls\PollsRestrictedView.xaml" />
