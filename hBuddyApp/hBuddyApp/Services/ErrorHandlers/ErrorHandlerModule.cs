@@ -34,7 +34,7 @@ namespace hBuddyApp.Services.ErrorHandlers
             containerRegistry.Register<OperationCancelledErrorHandler>();
             containerRegistry.Register<MaintenanceErrorHandler>();
             containerRegistry.Register<ForceUpdateErrorHandler>();
-            containerRegistry.Register<ExpiredTokenErrorHandler>();
+            //containerRegistry.Register<ExpiredTokenErrorHandler>();
 
             containerRegistry.RegisterSingletonFromDelegate<IErrorHandler>((provider) =>
             {
@@ -43,12 +43,12 @@ namespace hBuddyApp.Services.ErrorHandlers
                 var operationCancelledErrorHandler = provider.GetRequiredService<OperationCancelledErrorHandler>();
                 var maintenanceErrorHandler = provider.GetRequiredService<MaintenanceErrorHandler>();
                 var forceUpdateErrorHandler = provider.GetRequiredService<ForceUpdateErrorHandler>();
-                var expiredTokenErrorHandler = provider.GetRequiredService<ExpiredTokenErrorHandler>();
+                //var expiredTokenErrorHandler = provider.GetRequiredService<ExpiredTokenErrorHandler>();
 
                 // Order of parameters defines error handling order.
                 return new CompositeErrorHandler(maintenanceErrorHandler,
                     forceUpdateErrorHandler,
-                    expiredTokenErrorHandler,
+                    //expiredTokenErrorHandler,
                     operationCancelledErrorHandler,
                     domainErrorHandler,
                     lastChanceErrorHandler);

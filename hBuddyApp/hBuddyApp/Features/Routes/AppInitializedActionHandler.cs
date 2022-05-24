@@ -16,12 +16,12 @@
 
 using System.Threading;
 using System.Threading.Tasks;
-using hBuddyApp.Features.Account.Services.Authentication;
+//using hBuddyApp.Features.Account.Services.Authentication;
 using hBuddyApp.Features.AppSettings;
 using hBuddyApp.Features.ChangeLanguage.Routes;
 using hBuddyApp.Features.Main.Routes;
-using hBuddyApp.Features.OnBoarding;
-using hBuddyApp.Features.OnBoarding.Routes;
+//using hBuddyApp.Features.OnBoarding;
+//using hBuddyApp.Features.OnBoarding.Routes;
 using hBuddyApp.Features.Welcome.Routes;
 using hBuddyApp.Services.Actions;
 using hBuddyApp.Services.ApplicationMetadata;
@@ -36,9 +36,9 @@ namespace hBuddyApp.Features.Routes
         private readonly IMediator _mediator;
         private readonly IMainStartupRoute _mainStartupRoute;
         private readonly IChangeLanguageRoute _changeLanguageRoute;
-        private readonly IOnBoardingRoute _onBoardingRoute;
+        //private readonly IOnBoardingRoute _onBoardingRoute;
         private readonly IWelcomeRoute _welcomeRoute;
-        private readonly IAuthenticationInfoService _authenticationInfoService;
+        //private readonly IAuthenticationInfoService _authenticationInfoService;
         private readonly IAppPreferencesService _appPreferencesService;
         private readonly INavigationServiceDelegate _navigationServiceDelegate;
         private readonly ILocalizationService _localizationService;
@@ -48,9 +48,9 @@ namespace hBuddyApp.Features.Routes
         public AppInitializedActionHandler(
             IMediator mediator,
             IMainStartupRoute mainStartupRoute,
-            IOnBoardingRoute onBoardingRoute,
+            //IOnBoardingRoute onBoardingRoute,
             IWelcomeRoute welcomeRoute,
-            IAuthenticationInfoService authenticationInfoService,
+            //IAuthenticationInfoService authenticationInfoService,
             IAppPreferencesService appPreferencesService,
             INavigationServiceDelegate navigationServiceDelegate,
             IChangeLanguageRoute changeLanguageRoute,
@@ -58,9 +58,9 @@ namespace hBuddyApp.Features.Routes
         {
             _mediator = mediator;
             _mainStartupRoute = mainStartupRoute;
-            _onBoardingRoute = onBoardingRoute;
+            //_onBoardingRoute = onBoardingRoute;
             _welcomeRoute = welcomeRoute;
-            _authenticationInfoService = authenticationInfoService;
+            //_authenticationInfoService = authenticationInfoService;
             _appPreferencesService = appPreferencesService;
             _navigationServiceDelegate = navigationServiceDelegate;
             _changeLanguageRoute = changeLanguageRoute;
@@ -69,32 +69,35 @@ namespace hBuddyApp.Features.Routes
 
         protected override async Task Handle(AppInitializedAction request, CancellationToken cancellationToken)
         {
-            if (_authenticationInfoService.IsAuthenticated())
-            {
-                _localizationService.InitializeLocale();
-                _mediator.Send(new FetchMetadataAction()).FireAndForget();
-                if (_appPreferencesService.GetOnBoardingState() || _authenticationInfoService.IsAnonymous())
-                {
-                    await _mainStartupRoute.ExecuteAsync(_navigationServiceDelegate);
-                }
-                else
-                {
-                    await _onBoardingRoute.ExecuteAsync(_navigationServiceDelegate);
-                }
-            }
-            else
-            {
-                var isFirstLaunch = Xamarin.Essentials.Preferences.Get(IsFirstRunFieldName, true);
-                if (isFirstLaunch)
-                {
-                    await _changeLanguageRoute.ExecuteAsync(_navigationServiceDelegate);
-                }
-                else
-                {
-                    _localizationService.InitializeLocale();
-                    await _welcomeRoute.ExecuteAsync(_navigationServiceDelegate);
-                }
-            }
+            //if (_authenticationInfoService.IsAuthenticated())
+            //{
+            //    _localizationService.InitializeLocale();
+            //    _mediator.Send(new FetchMetadataAction()).FireAndForget();
+            //    if (_appPreferencesService.GetOnBoardingState() || _authenticationInfoService.IsAnonymous())
+            //    {
+            //        await _mainStartupRoute.ExecuteAsync(_navigationServiceDelegate);
+            //    }
+            //    else
+            //    {
+            //        await _onBoardingRoute.ExecuteAsync(_navigationServiceDelegate);
+            //    }
+            //}
+            //else
+            //{
+            //    var isFirstLaunch = Xamarin.Essentials.Preferences.Get(IsFirstRunFieldName, true);
+            //    if (isFirstLaunch)
+            //    {
+            //        await _changeLanguageRoute.ExecuteAsync(_navigationServiceDelegate);
+            //    }
+            //    else
+            //    {
+            //        _localizationService.InitializeLocale();
+            //        await _welcomeRoute.ExecuteAsync(_navigationServiceDelegate);
+            //    }
+            //}
+
+            _localizationService.InitializeLocale();
+            await _welcomeRoute.ExecuteAsync(_navigationServiceDelegate);
         }
     }
 }

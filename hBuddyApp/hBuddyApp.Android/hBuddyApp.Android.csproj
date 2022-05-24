@@ -192,8 +192,6 @@
     <Compile Include="Configuration\DroidConfiguration.cs" />
     <Compile Include="CustomRenderers\CustomNavigationPageRenderer.cs" />
     <Compile Include="CustomRenderers\ExtendedTabbedPageRenderer.cs" />
-    <Compile Include="Features\PushNotifications\PushNotificationPermissionInitializer.cs" />
-    <Compile Include="Features\PushNotifications\PushNotificationPermissions.cs" />
     <Compile Include="Features\Analytics\FirebaseAnalyticsService.cs" />
     <Compile Include="Services\Http\AndroidClientConnectivityErrorHandler.cs" />
     <Compile Include="CustomRenderers\ExtendedButtonRenderer.cs" />

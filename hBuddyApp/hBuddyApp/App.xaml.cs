@@ -17,17 +17,17 @@
 using hBuddyApp.Features;
 using hBuddyApp.Features.AboutUs;
 using hBuddyApp.Features.AboutUs.Actions;
-using hBuddyApp.Features.AccountFeaturesInformation;
+//using hBuddyApp.Features.AccountFeaturesInformation;
 using hBuddyApp.Features.AppSettings;
 using hBuddyApp.Features.ChangeCountryProgram;
 using hBuddyApp.Features.ChangeCountryProgram.Actions;
 using hBuddyApp.Features.ChangeLanguage;
 using hBuddyApp.Features.ChangeLanguage.Actions;
 using hBuddyApp.Features.Chat;
-using hBuddyApp.Features.CreateProfile;
-using hBuddyApp.Features.ExpiredToken;
-using hBuddyApp.Features.Filters;
-using hBuddyApp.Features.Filters.Actions;
+//using hBuddyApp.Features.CreateProfile;
+//using hBuddyApp.Features.ExpiredToken;
+//using hBuddyApp.Features.Filters;
+//using hBuddyApp.Features.Filters.Actions;
 using hBuddyApp.Features.ForceUpdate;
 using hBuddyApp.Features.Main;
 using hBuddyApp.Features.Maintenance;
@@ -35,8 +35,8 @@ using hBuddyApp.Features.Menu;
 using hBuddyApp.Features.NewsArticle;
 using hBuddyApp.Features.NewsArticle.Actions;
 using hBuddyApp.Features.Newsfeed;
-using hBuddyApp.Features.OnBoarding;
-using hBuddyApp.Features.OnBoarding.Actions;
+//using hBuddyApp.Features.OnBoarding;
+//using hBuddyApp.Features.OnBoarding.Actions;
 using hBuddyApp.Features.Polls;
 using hBuddyApp.Features.PrivacyPolicy;
 using hBuddyApp.Features.PrivacyPolicy.Actions;
@@ -52,9 +52,9 @@ using hBuddyApp.Features.SettingsChangeCountryProgram;
 using hBuddyApp.Features.SettingsChangeCountryProgram.Actions;
 using hBuddyApp.Features.SettingsChangeLanguage;
 using hBuddyApp.Features.SettingsChangeLanguage.Actions;
-using hBuddyApp.Features.UserDeleteAccount;
-using hBuddyApp.Features.UserDeleteAccount.Actions;
-using hBuddyApp.Features.UserLogIn;
+//using hBuddyApp.Features.UserDeleteAccount;
+//using hBuddyApp.Features.UserDeleteAccount.Actions;
+//using hBuddyApp.Features.UserLogIn;
 using hBuddyApp.Logs;
 using hBuddyApp.Services.Actions;
 using hBuddyApp.Services.ApplicationMetadata;
@@ -263,25 +263,25 @@ namespace hBuddyApp
                     provider,
                     MetadataTriggers.ForceFetchMetadataActionHandler));
 
-            this.RegisterFeature<CreateProfileFeature>((provider, feature) =>
-                feature.RegisterNavigationTriggers(
-                    provider,
-                    CreateProfileTriggers.Navigation.In.AppInitializedActionHandler,
-                    CreateProfileTriggers.Navigation.Out.NavigateToLogInActionHandler,
-                    CreateProfileTriggers.Navigation.Out.NavigateToOnBoardingActionHandler));
+            //this.RegisterFeature<CreateProfileFeature>((provider, feature) =>
+            //    feature.RegisterNavigationTriggers(
+            //        provider,
+            //        CreateProfileTriggers.Navigation.In.AppInitializedActionHandler,
+            //        CreateProfileTriggers.Navigation.Out.NavigateToLogInActionHandler,
+            //        CreateProfileTriggers.Navigation.Out.NavigateToOnBoardingActionHandler));
 
-            this.RegisterFeature<FiltersFeature>((provider, feature) =>
-                feature.RegisterNavigationTriggers(
-                    provider,
-                    FiltersTriggers.Navigation.In.NavigateToFiltersActionHandler,
-                    FiltersTriggers.Navigation.Out.NavigateToNewsfeed));
+            //this.RegisterFeature<FiltersFeature>((provider, feature) =>
+            //    feature.RegisterNavigationTriggers(
+            //        provider,
+            //        FiltersTriggers.Navigation.In.NavigateToFiltersActionHandler,
+            //        FiltersTriggers.Navigation.Out.NavigateToNewsfeed));
 
-            this.RegisterFeature<AccountInformationFeature>((provider, feature) =>
-                feature.RegisterNavigationTriggers(
-                    provider,
-                    AccountInformationTriggers.Navigation.In.NavigateToAccountInformationActionHandler,
-                    AccountInformationTriggers.Navigation.Out.NavigateCreateProfile,
-                    AccountInformationTriggers.Navigation.Out.SignInAnonymous));
+            //this.RegisterFeature<AccountInformationFeature>((provider, feature) =>
+            //    feature.RegisterNavigationTriggers(
+            //        provider,
+            //        AccountInformationTriggers.Navigation.In.NavigateToAccountInformationActionHandler,
+            //        AccountInformationTriggers.Navigation.Out.NavigateCreateProfile,
+            //        AccountInformationTriggers.Navigation.Out.SignInAnonymous));
 
             //this.RegisterFeature<MainFeature>((provider, feature) =>
             //    feature.RegisterPageService<NewsfeedPageProviderService>(provider)
@@ -303,19 +303,19 @@ namespace hBuddyApp
             //        .RegisterPageService<RumoursTabbedPageProviderService>(provider)
             //        .RegisterPageService<MenuPageProviderService>(provider));
 
-            this.RegisterFeature<UserLogInFeature>((provider, feature) =>
-                feature.RegisterNavigationTriggers(
-                    provider,
-                    UserLogInTriggers.Navigation.Out.NavigateToOnboardingActionHandler));
+            //this.RegisterFeature<UserLogInFeature>((provider, feature) =>
+            //    feature.RegisterNavigationTriggers(
+            //        provider,
+            //        UserLogInTriggers.Navigation.Out.NavigateToOnboardingActionHandler));
 
-            this.RegisterFeature<OnBoardingFeature>((provider, feature) =>
-                feature.RegisterNavigationTriggers(
-                    provider,
-                    OnBoardingTriggers.Navigation.Out.NavigateToMainActionHandler));
+            //this.RegisterFeature<OnBoardingFeature>((provider, feature) =>
+            //    feature.RegisterNavigationTriggers(
+            //        provider,
+            //        OnBoardingTriggers.Navigation.Out.NavigateToMainActionHandler));
 
             this.RegisterFeature<ForceUpdateFeature>();
             this.RegisterFeature<MaintenanceFeature>();
-            this.RegisterFeature<ExpiredTokenFeature>();
+            //this.RegisterFeature<ExpiredTokenFeature>();
             this.RegisterFeature<MenuFeature>();
 
 
@@ -367,11 +367,11 @@ namespace hBuddyApp
                     SettingsChangeCountryProgramTriggers.Navigation.In.NavigateToSettingsChangeCountryProgramActionHandler,
                     SettingsChangeCountryProgramTriggers.Navigation.Out.NavigateToSettingsWelcomeActionHandler));
 
-            this.RegisterFeature<DeleteAccountFeature>((provider, feature) =>
-                feature.RegisterNavigationTriggers(
-                    provider,
-                    DeleteAccountTriggers.Navigation.In.NavigateToDeleteAccountAndDataActionHandler
-                    ));
+            //this.RegisterFeature<DeleteAccountFeature>((provider, feature) =>
+            //    feature.RegisterNavigationTriggers(
+            //        provider,
+            //        DeleteAccountTriggers.Navigation.In.NavigateToDeleteAccountAndDataActionHandler
+            //        ));
 
             this.RegisterFeature<ChatFeature>((provider, feature) =>
             {
@@ -425,12 +425,12 @@ namespace hBuddyApp
             }
 
             // Application features registrations
-            moduleCatalog.AddModule<Features.Account.AccountModule>(InitializationMode.WhenAvailable);
+            //moduleCatalog.AddModule<Features.Account.AccountModule>(InitializationMode.WhenAvailable);
             moduleCatalog.AddModule<Features.Welcome.WelcomeModule>(InitializationMode.WhenAvailable);
-            moduleCatalog.AddModule<Features.UserProfile.UserProfileModule>(InitializationMode.WhenAvailable);
+            //moduleCatalog.AddModule<Features.UserProfile.UserProfileModule>(InitializationMode.WhenAvailable);
             moduleCatalog.AddModule<Features.Newsfeed.NewsfeedModule>(InitializationMode.WhenAvailable);
-            moduleCatalog.AddModule<Features.PushNotifications.PushNotificationsModule>(InitializationMode.WhenAvailable);
-            moduleCatalog.AddModule<Features.UserLogOut.LogOutModule>(InitializationMode.WhenAvailable);
+            //moduleCatalog.AddModule<Features.PushNotifications.PushNotificationsModule>(InitializationMode.WhenAvailable);
+            //moduleCatalog.AddModule<Features.UserLogOut.LogOutModule>(InitializationMode.WhenAvailable);
 
             // Initialize platform specific modules
             var moduleCatalogInitializer = Container.Resolve<IModuleCatalogInitializer>();
@@ -444,13 +444,13 @@ namespace hBuddyApp
         // Steps will be shown in the defined order.
         private void ConfigureOnBoarding(IModuleCatalog moduleCatalog)
         {
-            moduleCatalog.AddModule<Features.PushNotifications.OnBoardingStep.PushNotificationOnBoardingModule>(InitializationMode.WhenAvailable);
+            //moduleCatalog.AddModule<Features.PushNotifications.OnBoardingStep.PushNotificationOnBoardingModule>(InitializationMode.WhenAvailable);
         }
 
         private void ConfigureCleanUpBehavior(IModuleCatalog moduleCatalog)
         {
             moduleCatalog.AddModule<Services.CleanUp.CleanUpModule>();
-            moduleCatalog.AddModule<Features.Account.Handlers.AuthenticationInfoCleanUpHandlerModule>();
+            //moduleCatalog.AddModule<Features.Account.Handlers.AuthenticationInfoCleanUpHandlerModule>();
             moduleCatalog.AddModule<Services.Storage.Handlers.StorageCleanUpHandlerModule>();
             moduleCatalog.AddModule<Services.Security.Handlers.SecretsCleanUpHandlerModule>();
         }

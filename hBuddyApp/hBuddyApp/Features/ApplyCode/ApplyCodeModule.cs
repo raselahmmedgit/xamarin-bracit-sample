@@ -31,8 +31,8 @@ namespace hBuddyApp.Features.ApplyCode
             containerRegistry.RegisterForNavigation<ApplyCodePage, ApplyCodeViewModel>();
 
             containerRegistry.Register<Routes.IApplyCodeRoute, Routes.ApplyCodeRoute>();
-            containerRegistry.Register<IUserStatusChangeService, UserStatusChangeService>();
-            containerRegistry.Register<IUserStatusChangeServiceErrorHandler, UserStatusChangeServiceErrorHandler>();
+            //containerRegistry.Register<IUserStatusChangeService, UserStatusChangeService>();
+            //containerRegistry.Register<IUserStatusChangeServiceErrorHandler, UserStatusChangeServiceErrorHandler>();
         }
     }
 }

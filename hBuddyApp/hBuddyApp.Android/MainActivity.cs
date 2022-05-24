@@ -25,13 +25,13 @@ using Android.Util;
 using hBuddyApp.Configuration;
 using hBuddyApp.Droid.Configuration;
 using hBuddyApp.Droid.Features.Analytics;
-using hBuddyApp.Droid.Features.PushNotifications;
+//using hBuddyApp.Droid.Features.PushNotifications;
 using hBuddyApp.Droid.Services;
 using hBuddyApp.Droid.Services.Http;
 using hBuddyApp.Features;
 using hBuddyApp.Features.FirebaseRemoteConfig;
-using hBuddyApp.Features.PushNotifications;
-using hBuddyApp.Features.PushNotifications.Services;
+//using hBuddyApp.Features.PushNotifications;
+//using hBuddyApp.Features.PushNotifications.Services;
 using hBuddyApp.Services;
 using hBuddyApp.Services.Platform;
 using hBuddyApp.Services.Serialization;
@@ -136,16 +136,16 @@ namespace hBuddyApp.Droid
             //CheckParameters(intent);
         }
 
-        private async void CheckParameters(Intent intent)
-        {
-            var pushNotificationData = intent?.Extras?.GetString(PushNotificationKey);
-            if (!string.IsNullOrEmpty(pushNotificationData))
-            {
-                var pushNotification = await Serializer.Instance.DeserializeAsync<PushNotification>(pushNotificationData);
+        //private async void CheckParameters(Intent intent)
+        //{
+        //    var pushNotificationData = intent?.Extras?.GetString(PushNotificationKey);
+        //    if (!string.IsNullOrEmpty(pushNotificationData))
+        //    {
+        //        var pushNotification = await Serializer.Instance.DeserializeAsync<PushNotification>(pushNotificationData);
 
-                await PushNotificationsManager.Instance.HandleAsync(pushNotification);
-            }
-        }
+        //        await PushNotificationsManager.Instance.HandleAsync(pushNotification);
+        //    }
+        //}
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
@@ -205,7 +205,7 @@ namespace hBuddyApp.Droid
             containerRegistry.RegisterInstance<IModuleCatalogInitializer>(this);
 
             containerRegistry.Register<hBuddyApp.Services.Http.IHttpClientHandlerProvider, Services.Http.NativeHttpClientHandlerProvider>();
-            containerRegistry.Register<IPushNotificationInitializer, PushNotificationPermissionInitializer>();
+            //containerRegistry.Register<IPushNotificationInitializer, PushNotificationPermissionInitializer>();
             containerRegistry.Register<IAppStoreService, AppStoreService>();
 
             containerRegistry.Register<IFirebaseRemoteConfigurationService, FirebaseRemoteConfigurationService>();

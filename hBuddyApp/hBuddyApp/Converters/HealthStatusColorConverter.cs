@@ -15,7 +15,7 @@
 // =========================================================================
 
 using System;
-using hBuddyApp.Features.UserProfile.Components.UserStatusCard;
+//using hBuddyApp.Features.UserProfile.Components.UserStatusCard;
 using Xamarin.Forms;
 
 namespace hBuddyApp.Converters
@@ -32,20 +32,21 @@ namespace hBuddyApp.Converters
 
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            if (!(value is Severity severity)) return NotRecognizedSeverityColor;
-            switch (severity)
-            {
-                case Severity.Low:
-                    return LowSeverityColor;
-                case Severity.High:
-                    return HighSeverityColor;
-                case Severity.Critical:
-                    return CriticalSeverityColor;
-                case Severity.NotRecognized:
-                    return NotRecognizedSeverityColor;
-                default:
-                    return NotRecognizedSeverityColor;
-            }
+            //if (!(value is Severity severity)) return NotRecognizedSeverityColor;
+            //switch (severity)
+            //{
+            //    case Severity.Low:
+            //        return LowSeverityColor;
+            //    case Severity.High:
+            //        return HighSeverityColor;
+            //    case Severity.Critical:
+            //        return CriticalSeverityColor;
+            //    case Severity.NotRecognized:
+            //        return NotRecognizedSeverityColor;
+            //    default:
+            //        return NotRecognizedSeverityColor;
+            //}
+            return NotRecognizedSeverityColor;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter,

@@ -23,7 +23,7 @@ using hBuddyApp.Features.Components.BusyIndicator;
 using hBuddyApp.Features.Components.InfoView;
 using hBuddyApp.Features.ComponentsManagement;
 using hBuddyApp.Features.Newsfeed.Services;
-using hBuddyApp.Features.UserState.Services;
+//using hBuddyApp.Features.UserState.Services;
 using hBuddyApp.Services.ErrorHandlers;
 using hBuddyApp.Services.Http.ApiExceptions;
 using MediatR;
@@ -36,18 +36,18 @@ namespace hBuddyApp.Features.Newsfeed.Components.News
         private const string NoContentImgSource = "no_content.svg";
 
         private CancellationTokenSource _lifecycleCancellationTokenSource = new CancellationTokenSource();
-        private readonly IUserStatusContainer _userStatusContainer;
+        //private readonly IUserStatusContainer _userStatusContainer;
         private readonly IErrorHandler _errorHandler;
         private readonly INewsfeedService _newsFeedService;
         private readonly IMediator _mediator;
 
         public NewsComponentService(
-            IUserStatusContainer userStatusContainer,
+            //IUserStatusContainer userStatusContainer,
             IErrorHandler errorHandler,
             IMediator mediator,
             INewsfeedService newsFeedService)
         {
-            _userStatusContainer = userStatusContainer;
+            //_userStatusContainer = userStatusContainer;
             _errorHandler = errorHandler;
             _mediator = mediator;
             _newsFeedService = newsFeedService;

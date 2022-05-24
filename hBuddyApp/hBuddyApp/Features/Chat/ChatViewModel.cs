@@ -19,7 +19,7 @@ using hBuddyApp.Features.ChangeCountryProgram.Routes;
 using hBuddyApp.Features.Components.InfoView;
 using hBuddyApp.Features.RapidProFcmPushNotifications;
 using hBuddyApp.Features.RapidProFcmPushNotifications.Services;
-using hBuddyApp.Features.UserProfile.Services;
+//using hBuddyApp.Features.UserProfile.Services;
 using hBuddyApp.Services.Navigation;
 using hBuddyApp.Services.Notification;
 using Microsoft.Extensions.Logging;
@@ -45,7 +45,7 @@ namespace hBuddyApp.Features.Chat
         //private readonly IMessagesProcessor _messagesProcessor;
         private readonly ILogger _logger;
         //private readonly IMessageInteractor _messageInteractor;
-        private readonly IUserAccountContainer _userAccountContainer;
+        //private readonly IUserAccountContainer _userAccountContainer;
         private readonly INotificationManager _notificationManager;
         private readonly INavigationServiceDelegate _navigationServiceDelegate;
         private readonly IChangeCountryProgramRoute _changeCountryProgramRoute;
@@ -65,7 +65,7 @@ namespace hBuddyApp.Features.Chat
         public string InputText { get; set; }
         public string RapidProMessageId { get; set; }
         public string ActionInputText { get; set; }
-        public UserAccountInfo _userAccountInfo { get; set; }
+        //public UserAccountInfo _userAccountInfo { get; set; }
 
         public ICommand OnSendCommand { get; set; }
         public ICommand OnActionSendCommand { get; set; }
@@ -105,7 +105,7 @@ namespace hBuddyApp.Features.Chat
 
         public ChatViewModel(
             ILoggerFactory loggerFactory,
-            IUserAccountContainer userAccountContainer,
+            //IUserAccountContainer userAccountContainer,
             INotificationManager notificationManager,
             IChangeCountryProgramRoute changeCountryProgramRoute,
             INavigationServiceDelegate navigationServiceDelegate)
@@ -128,7 +128,7 @@ namespace hBuddyApp.Features.Chat
             //HandleMessageCommand = ReactiveCommand.CreateFromTask<Message>(HandleMessageAsync);
             //SendCommand = ReactiveCommand.CreateFromTask(SendAsync);
 
-            _userAccountContainer = userAccountContainer;
+            //_userAccountContainer = userAccountContainer;
 
             IsBusy = true;
 
@@ -390,7 +390,7 @@ namespace hBuddyApp.Features.Chat
 
             try
             {
-                _userAccountInfo = await _userAccountContainer.GetAsync().ConfigureAwait(false);
+                //_userAccountInfo = await _userAccountContainer.GetAsync().ConfigureAwait(false);
 
                 if (_rapidProContainer.RapidProIsDatabase == true && _rapidProContainer.RapidProIsInitMsg == true)
                 {
@@ -468,9 +468,12 @@ namespace hBuddyApp.Features.Chat
                     //if (_rapidProContainer.RapidProIsInit == true && _rapidProContainer.RapidProIsInitMsg == true)
                     if (_rapidProContainer.RapidProIsInit == true)
                     {
-                        string user = _userAccountInfo.IsAnonymous ? MessageUserEnum.UserAnonymous.ToDescriptionAttr() : MessageUserEnum.UserLogin.ToDescriptionAttr();
-                        string userName = _userAccountInfo.UserAccount != null ? _userAccountInfo.UserAccount.Username : string.Empty;
-                        var rapidProMessage = new RapidProMessage() { PId = Guid.NewGuid().ToString(), Text = inputText, Value = inputText, User = user, UserName = userName, ChannelId = _firebaseContainer.FirebaseChannelId, Type = MessageTypeEnum.Chat.ToDescriptionAttr(), CreatedDateTime = DateTime.UtcNow };
+                        //string user = _userAccountInfo.IsAnonymous ? MessageUserEnum.UserAnonymous.ToDescriptionAttr() : MessageUserEnum.UserLogin.ToDescriptionAttr();
+                        //string userName = _userAccountInfo.UserAccount != null ? _userAccountInfo.UserAccount.Username : string.Empty;
+                        //var rapidProMessage = new RapidProMessage() { PId = Guid.NewGuid().ToString(), Text = inputText, Value = inputText, User = user, UserName = userName, ChannelId = _firebaseContainer.FirebaseChannelId, Type = MessageTypeEnum.Chat.ToDescriptionAttr(), CreatedDateTime = DateTime.UtcNow };
+                        //InsertChatRapidProMessage(rapidProMessage);
+
+                        var rapidProMessage = new RapidProMessage() { PId = Guid.NewGuid().ToString(), Text = inputText, Value = inputText, User = "", UserName = "", ChannelId = _firebaseContainer.FirebaseChannelId, Type = MessageTypeEnum.Chat.ToDescriptionAttr(), CreatedDateTime = DateTime.UtcNow };
                         InsertChatRapidProMessage(rapidProMessage);
 
                         var rapidProReceive = _rapidProService.RapidProReceive(rapidProUrn, rapidProFcmToken, inputText);

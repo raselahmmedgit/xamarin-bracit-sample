@@ -15,7 +15,7 @@
 // =========================================================================
 
 using System;
-using hBuddyApp.Features.Medical;
+//using hBuddyApp.Features.Medical;
 
 namespace hBuddyApp.Features.Menu.Actions
 {
@@ -25,7 +25,7 @@ namespace hBuddyApp.Features.Menu.Actions
         {
             public static class Out
             {
-                public static Type NavigateToMedical { get; } = typeof(NavigateToMedicalFlowActionHandler);
+                //public static Type NavigateToMedical { get; } = typeof(NavigateToMedicalFlowActionHandler);
             }
         }
     }

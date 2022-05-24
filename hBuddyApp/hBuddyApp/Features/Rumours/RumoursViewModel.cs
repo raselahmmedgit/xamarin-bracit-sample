@@ -14,13 +14,13 @@
 // limitations under the License.
 // =========================================================================
 
-using hBuddyApp.Features.Account.Services;
+//using hBuddyApp.Features.Account.Services;
 using hBuddyApp.Features.Analytics;
 using hBuddyApp.Features.ChangeCountryProgram.Routes;
 using hBuddyApp.Features.Components.InfoView;
 using hBuddyApp.Features.RapidProFcmPushNotifications;
 using hBuddyApp.Features.RapidProFcmPushNotifications.Services;
-using hBuddyApp.Features.UserProfile.Services;
+//using hBuddyApp.Features.UserProfile.Services;
 using hBuddyApp.Services.Navigation;
 using hBuddyApp.Services.Notification;
 using hBuddyApp.Services.Serialization;
@@ -51,8 +51,8 @@ namespace hBuddyApp.Features.Rumours
         private readonly ILogger _logger;
         //private readonly IMessagesProcessor _messagesProcessor;
         //private readonly IMessageInteractor _messageInteractor;
-        private readonly IUserAccountContainer _userAccountContainer;
-        private readonly IAccountInformationContainer _accountContainer;
+        //private readonly IUserAccountContainer _userAccountContainer;
+        //private readonly IAccountInformationContainer _accountContainer;
         //private readonly IMediator _mediator;
         private readonly INotificationManager _notificationManager;
         private readonly INavigationServiceDelegate _navigationServiceDelegate;
@@ -109,7 +109,7 @@ namespace hBuddyApp.Features.Rumours
         public string InputText { get; set; }
         public string RapidProMessageId { get; set; }
         public string ActionInputText { get; set; }
-        public UserAccountInfo _userAccountInfo { get; set; }
+        //public UserAccountInfo _userAccountInfo { get; set; }
 
         public ICommand OnSendCommand { get; set; }
         public ICommand OnActionSendCommand { get; set; }
@@ -143,7 +143,7 @@ namespace hBuddyApp.Features.Rumours
             IMediator mediator,
             ISerializer serializer,
             ILoggerFactory loggerFactory,
-            IUserAccountContainer userAccountContainer,
+            //IUserAccountContainer userAccountContainer,
             INotificationManager notificationManager,
             IChangeCountryProgramRoute changeCountryProgramRoute,
             INavigationServiceDelegate navigationServiceDelegate)
@@ -161,7 +161,7 @@ namespace hBuddyApp.Features.Rumours
             //_messagesProcessor.AddHandler(new InputMessageHandler(b => IsInputVisible = b));
             //_messagesProcessor.AddHandler(new WebSessionConnectionHandler(loggerFactory, isConnected => IsBusy = !isConnected));
 
-            _userAccountContainer = userAccountContainer;
+            //_userAccountContainer = userAccountContainer;
 
             IsBusy = true;
 
@@ -485,7 +485,7 @@ namespace hBuddyApp.Features.Rumours
 
             try
             {
-                _userAccountInfo = await _userAccountContainer.GetAsync().ConfigureAwait(false);
+                //_userAccountInfo = await _userAccountContainer.GetAsync().ConfigureAwait(false);
 
                 if (_rapidProContainer.RapidProIsDatabase == true && _rapidProContainer.RapidProIsInitMsg == true)
                 {
@@ -563,8 +563,10 @@ namespace hBuddyApp.Features.Rumours
                     //if (_rapidProContainer.RapidProIsInit == true && _rapidProContainer.RapidProIsInitMsg == true)
                     if (_rapidProContainer.RapidProIsInit == true)
                     {
-                        string user = _userAccountInfo.IsAnonymous ? MessageUserEnum.UserAnonymous.ToDescriptionAttr() : MessageUserEnum.UserLogin.ToDescriptionAttr();
-                        string userName = _userAccountInfo.UserAccount != null ? _userAccountInfo.UserAccount.Username : string.Empty;
+                        //string user = _userAccountInfo.IsAnonymous ? MessageUserEnum.UserAnonymous.ToDescriptionAttr() : MessageUserEnum.UserLogin.ToDescriptionAttr();
+                        //string userName = _userAccountInfo.UserAccount != null ? _userAccountInfo.UserAccount.Username : string.Empty;
+                        string user = MessageUserEnum.UserAnonymous.ToDescriptionAttr();
+                        string userName = string.Empty;
                         var rapidProMessage = new RapidProMessage() { PId = Guid.NewGuid().ToString(), Text = inputText, Value = inputText, User = user, UserName = userName, ChannelId = _firebaseContainer.FirebaseChannelId, Type = MessageTypeEnum.Rumours.ToDescriptionAttr(), CreatedDateTime = DateTime.UtcNow };
                         InsertRumoursRapidProMessage(rapidProMessage);
 

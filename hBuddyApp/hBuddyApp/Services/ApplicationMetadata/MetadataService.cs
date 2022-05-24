@@ -21,7 +21,7 @@ using System.Threading.Tasks;
 using hBuddyApp.Client.Services;
 using hBuddyApp.Client.Services.Platform;
 using hBuddyApp.Client.Services.Platform.Models;
-using hBuddyApp.Features.UserProfile.Services;
+//using hBuddyApp.Features.UserProfile.Services;
 using hBuddyApp.Logs;
 using hBuddyApp.Services.Http.Connectivity;
 using hBuddyApp.Services.Http.ExceptionsHandling;
@@ -59,7 +59,7 @@ namespace hBuddyApp.Services.ApplicationMetadata
             _serviceErrorHandler = serviceErrorHandler;
             _connectivityService = connectivityService;
             _localizationService = localizationService;
-            _logger = loggerFactory.CreateLogger<UserAccountService>();
+            _logger = loggerFactory.CreateLogger<MetadataService>();
         }
 
         private DateTime LastUpdateDate { get; set; }

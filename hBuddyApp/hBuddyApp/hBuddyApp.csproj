@@ -7,12 +7,60 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Features\CreateProfile\Components\**" />
-    <Compile Remove="Features\CreateProfile\Services\**" />
-    <EmbeddedResource Remove="Features\CreateProfile\Components\**" />
-    <EmbeddedResource Remove="Features\CreateProfile\Services\**" />
-    <None Remove="Features\CreateProfile\Components\**" />
-    <None Remove="Features\CreateProfile\Services\**" />
+    <Compile Remove="Features\AccountFeaturesInformation\**" />
+    <Compile Remove="Features\Account\**" />
+    <Compile Remove="Features\AnonymousProfile\**" />
+    <Compile Remove="Features\CreateProfile\**" />
+    <Compile Remove="Features\ExpiredToken\**" />
+    <Compile Remove="Features\MedicalChangeStatus\**" />
+    <Compile Remove="Features\MedicalCodeSharing\**" />
+    <Compile Remove="Features\MedicalLogin\**" />
+    <Compile Remove="Features\Medical\**" />
+    <Compile Remove="Features\OnBoarding\**" />
+    <Compile Remove="Features\PushNotifications\**" />
+    <Compile Remove="Features\UserData\**" />
+    <Compile Remove="Features\UserDeleteAccount\**" />
+    <Compile Remove="Features\UserLogIn\**" />
+    <Compile Remove="Features\UserLogOut\**" />
+    <Compile Remove="Features\UserProfile\**" />
+    <Compile Remove="Features\UserState\**" />
+    <EmbeddedResource Remove="Features\AccountFeaturesInformation\**" />
+    <EmbeddedResource Remove="Features\Account\**" />
+    <EmbeddedResource Remove="Features\AnonymousProfile\**" />
+    <EmbeddedResource Remove="Features\CreateProfile\**" />
+    <EmbeddedResource Remove="Features\ExpiredToken\**" />
+    <EmbeddedResource Remove="Features\MedicalChangeStatus\**" />
+    <EmbeddedResource Remove="Features\MedicalCodeSharing\**" />
+    <EmbeddedResource Remove="Features\MedicalLogin\**" />
+    <EmbeddedResource Remove="Features\Medical\**" />
+    <EmbeddedResource Remove="Features\OnBoarding\**" />
+    <EmbeddedResource Remove="Features\PushNotifications\**" />
+    <EmbeddedResource Remove="Features\UserData\**" />
+    <EmbeddedResource Remove="Features\UserDeleteAccount\**" />
+    <EmbeddedResource Remove="Features\UserLogIn\**" />
+    <EmbeddedResource Remove="Features\UserLogOut\**" />
+    <EmbeddedResource Remove="Features\UserProfile\**" />
+    <EmbeddedResource Remove="Features\UserState\**" />
+    <None Remove="Features\AccountFeaturesInformation\**" />
+    <None Remove="Features\Account\**" />
+    <None Remove="Features\AnonymousProfile\**" />
+    <None Remove="Features\CreateProfile\**" />
+    <None Remove="Features\ExpiredToken\**" />
+    <None Remove="Features\MedicalChangeStatus\**" />
+    <None Remove="Features\MedicalCodeSharing\**" />
+    <None Remove="Features\MedicalLogin\**" />
+    <None Remove="Features\Medical\**" />
+    <None Remove="Features\OnBoarding\**" />
+    <None Remove="Features\PushNotifications\**" />
+    <None Remove="Features\UserData\**" />
+    <None Remove="Features\UserDeleteAccount\**" />
+    <None Remove="Features\UserLogIn\**" />
+    <None Remove="Features\UserLogOut\**" />
+    <None Remove="Features\UserProfile\**" />
+    <None Remove="Features\UserState\**" />
+    <Compile Remove="Features\ApplyCode\Services\IUserStatusChangeService.cs" />
+    <Compile Remove="Features\ApplyCode\Services\IUserStatusChangeServiceErrorHandler.cs" />
+    <Compile Remove="Features\ApplyCode\Services\UserStatusChangeService.cs" />
     <Compile Remove="Features\Menu\Components\MenuItemCard.xaml.cs" />
     <Compile Remove="Features\Polls\Actions\PollsLinkActionHandler.cs" />
     <Compile Remove="Features\Polls\PollsChatView.xaml.cs" />
@@ -22,22 +70,16 @@
     <Compile Remove="Features\Rumours\Components\RestrictedRumours.xaml.cs" />
     <Compile Remove="Features\SettingsChangeLanguage\Actions\AcceptInitialSettingsLanguageAction.cs" />
     <Compile Remove="Features\SettingsChangeLanguage\Actions\AcceptInitialSettingsLanguageActionHandler.cs" />
+    <Compile Remove="Services\ErrorHandlers\ExpiredTokenErrorHandler.cs" />
     <EmbeddedResource Remove="Features\Polls\PollsChatView.xaml" />
     <EmbeddedResource Remove="Features\Polls\PollsRestrictedView.xaml" />
     <EmbeddedResource Remove="Features\Rumours\Components\AllowedRumours.xaml" />
     <EmbeddedResource Remove="Features\Rumours\Components\RestrictedRumours.xaml" />
     <None Remove="Features\AboutUs\Resources\Images\star.svg" />
-    <None Remove="Features\AccountFeaturesInformation\Resources\Images\hb_logo.svg" />
-    <None Remove="Features\AccountFeaturesInformation\Resources\Images\health_wellbeing.svg" />
-    <None Remove="Features\AccountFeaturesInformation\Resources\Images\highlight.svg" />
-    <None Remove="Features\AccountFeaturesInformation\Resources\Images\locked.svg" />
     <None Remove="Features\ChangeCountryProgram\Resources\Images\countryprogram_map.svg" />
     <None Remove="Features\ChangeCountryProgram\Resources\Images\countryprogram_menu.svg" />
     <None Remove="Features\ChangeCountryProgram\Resources\Images\countryprogram_rectangle.svg" />
     <None Remove="Features\ChangeLanguage\Resources\Images\globe.svg" />
-    <None Remove="Features\CreateProfile\Resources\Images\person.svg" />
-    <None Remove="Features\CreateProfile\Resources\Images\rectangle_create_profile.svg" />
-    <None Remove="Features\ExpiredToken\Resources\Images\session_logo.svg" />
     <None Remove="Features\Filters\Resources\Images\arrow_right.svg" />
     <None Remove="Features\Filters\Resources\Images\filters_rectangle.svg" />
     <None Remove="Features\ForceUpdate\Resources\Images\update_logo.svg" />
@@ -53,30 +95,13 @@
     <None Remove="Features\Menu\Resources\Images\settings.svg" />
     <None Remove="Features\Menu\Resources\Images\arrow.svg" />
     <None Remove="Features\Newsfeed\Resources\Images\rectangle_news.svg" />
-    <None Remove="Features\OnBoarding\Resources\Images\completely_anonymous.svg" />
-    <None Remove="Features\OnBoarding\Resources\Images\important_notifications.svg" />
-    <None Remove="Features\OnBoarding\Resources\Images\important_notifications_background.svg" />
-    <None Remove="Features\OnBoarding\Resources\Images\man.svg" />
-    <None Remove="Features\OnBoarding\Resources\Images\notification_instruction1.svg" />
-    <None Remove="Features\OnBoarding\Resources\Images\notification_instruction2.svg" />
-    <None Remove="Features\OnBoarding\Resources\Images\notification_instruction3.svg" />
-    <None Remove="Features\OnBoarding\Resources\Images\plants.svg" />
-    <None Remove="Features\OnBoarding\Resources\Images\tailored_for_you.svg" />
     <None Remove="Features\PrivacyPolicy\Resources\Images\key.svg" />
     <None Remove="Features\Rumours\Resources\Images\rumours.svg" />
     <None Remove="Features\Rumours\Resources\Images\rumours_logo.svg" />
     <None Remove="Features\Rumours\Resources\Images\rumours_rectangle.svg" />
     <None Remove="Features\Settings\Resources\Images\arrow.svg" />
     <None Remove="Features\Settings\Resources\Images\language_setting.svg" />
-    <None Remove="Features\UserLogIn\Resources\Images\sign_in_person.svg" />
-    <None Remove="Features\UserLogOut\Resources\Images\logout.svg" />
     <None Remove="Features\Settings\Resources\Images\settings.svg" />
-    <None Remove="Features\UserDeleteAccount\Resources\Images\delete.svg" />
-    <None Remove="Features\UserProfile\Resources\Images\arrow_teal.svg" />
-    <None Remove="Features\UserProfile\Resources\Images\bluetooth.svg" />
-    <None Remove="Features\UserProfile\Resources\Images\encryption.svg" />
-    <None Remove="Features\UserProfile\Resources\Images\health_status_advice.svg" />
-    <None Remove="Features\UserProfile\Resources\Images\protecting.svg" />
     <None Remove="Features\Welcome\Resources\Images\hb_logo.svg" />
     <None Remove="Features\Welcome\Resources\Images\rectangle_welcome.svg" />
     <None Remove="Features\Welcome\Resources\Images\welcome_tail.svg" />
@@ -100,10 +125,6 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Features\Chat\Components\OutgoingViewCell.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\ExpiredToken\Resources\Localization.resx">
-      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-      <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Features\ForceUpdate\ForceUpdatePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -187,14 +208,6 @@
       <DependentUpon>SelectCountryProgramView.xaml</DependentUpon>
     </Compile>
     <Compile Update="Features\ChangeCountryProgram\Resources\Localization.Designer.cs">
-      <DependentUpon>Localization.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Update="Features\ExpiredToken\ForceUpdatePage.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
-    </Compile>
-    <Compile Update="Features\ExpiredToken\Resources\Localization.Designer.cs">
       <DependentUpon>Localization.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -287,14 +300,10 @@
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="$(XamarinFormsVersion)" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\Account\!Exceptions\" />
-    <Folder Include="Features\Account\Models\" />
-    <Folder Include="Features\MedicalChangeStatus\Services\" />
     <Folder Include="Features\NewsArticle\Resources\Images\" />
     <Folder Include="Services\Platform\" />
     <Folder Include="Services\Notification\" />
     <Folder Include="Services\Dispatcher\" />
-    <Folder Include="Features\PushNotifications\Services\" />
     <Folder Include="Features\!Base\ComponentsManagement\" />
     <Folder Include="Features\!Base\Regions\" />
     <Folder Include="Features\!Base\ComponentsManagement\Internal\" />
@@ -303,42 +312,20 @@
     <Folder Include="Features\!Base\ComponentsManagement\DataTemplateProviders\" />
     <Folder Include="Features\Menu\Resources\" />
     <Folder Include="Features\Menu\Components\" />
-    <Folder Include="Features\CreateProfile\Actions\" />
-    <Folder Include="Features\OnBoarding\Actions\" />
-    <Folder Include="Features\MedicalChangeStatus\Actions\" />
-    <Folder Include="Features\UserLogIn\Actions\" />
     <Folder Include="Features\ApplyCode\Actions\" />
     <Folder Include="Features\!Base\Registry\" />
     <Folder Include="Services\Feature\" />
     <Folder Include="Services\ApplicationMetadata\Actions\" />
-    <Folder Include="Features\UserLogOut\" />
-    <Folder Include="Features\UserLogOut\Resources\" />
-    <Folder Include="Features\UserLogOut\MenuComponents\" />
-    <Folder Include="Features\Medical\MenuComponents\" />
     <Folder Include="Features\Settings\MenuComponents\" />
-    <Folder Include="Features\AnonymousProfile\" />
-    <Folder Include="Features\AnonymousProfile\Services\" />
-    <Folder Include="Features\AnonymousProfile\!Exceptions\" />
-    <Folder Include="Features\Medical\Actions\" />
     <Folder Include="Features\Menu\Actions\" />
-    <Folder Include="Features\UserState\" />
-    <Folder Include="Features\UserState\Services\" />
-    <Folder Include="Features\UserData\" />
-    <Folder Include="Features\UserData\Services\" />
     <Folder Include="Features\Menu\Resources\Images\" />
-    <Folder Include="Features\UserLogOut\Resources\Images\" />
-    <Folder Include="Features\UserDeleteAccount\MenuComponents\" />
-    <Folder Include="Features\UserDeleteAccount\Resources\" />
-    <Folder Include="Features\UserDeleteAccount\Resources\Images\" />
     <Folder Include="Features\Components\InfoView\" />
     <Folder Include="Features\Polls\Resources\" />
     <Folder Include="Features\Polls\Resources\Images\" />
     <Folder Include="Features\Settings\Actions\" />
     <Folder Include="Features\Settings\Routes\" />
     <Folder Include="Services\Http\UriHandlers\" />
-    <Folder Include="Features\PushNotifications\SettingsComponents\" />
     <Folder Include="Features\ImagesScaling\" />
-    <Folder Include="Features\PushNotifications\Handlers\" />
     <Folder Include="Services\Http\PlatformAuthenticationHandling\" />
     <Folder Include="Services\Localization\" />
     <Folder Include="Utils\ReactiveCommandHelpers\" />
@@ -347,17 +334,6 @@
     <Folder Include="Services\Navigation\Hints\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Features\AccountFeaturesInformation\AccountInformationPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\AccountFeaturesInformation\Resources\Localization.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\Account\Resources\Localization.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Update="Features\ApplyCode\Resources\Localization.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Localization.Designer.cs</LastGenOutput>
@@ -368,13 +344,7 @@
     <EmbeddedResource Update="Features\Settings\Components\LanguageSettingsItemView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Features\UserDeleteAccount\Components\DeleteAccountView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Features\Components\CompletedView\CompletedView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\UserDeleteAccount\DeleteAccountPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Features\Filters\Components\FilterOptionCardSingleSelect.xaml">
@@ -390,10 +360,6 @@
     <EmbeddedResource Update="Features\Newsfeed\Components\News\NewsFilter.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Features\CreateProfile\Resources\Localization.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Update="Features\Filters\Components\FilterDescriptionCard.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -407,46 +373,8 @@
       <LastGenOutput>Localization.Designer.cs</LastGenOutput>
       <Generator>ResXFileCodeGenerator</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Features\MedicalChangeStatus\Resources\Localization.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\MedicalCodeSharing\MedicalCodeSharingPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\MedicalCodeSharing\Components\ShareButton\ShareButtonView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\MedicalCodeSharing\Components\SharedCode\SharedCodeView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\MedicalCodeSharing\Components\Title\TitleSharingView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="Features\Main\MainPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\MedicalCodeSharing\Resources\Localization.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\MedicalLogin\Resources\Localization.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\Medical\Resources\Localization.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\OnBoarding\Components\HorizontalSelectedItemIndicatorControl.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\OnBoarding\OnBoardingPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\OnBoarding\Resources\Localization.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Update="Features\Newsfeed\Resources\Localization.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -468,29 +396,6 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Features\Shell\ShellPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\UserLogIn\Resources\Localization.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\UserLogIn\UserLogInPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\UserProfile\Components\BluetoothReminder\BluetoothReminderView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\UserProfile\Components\ChangeStatus\ChangeStatusView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\UserProfile\Components\EncryptionStatus\EncryptionStatusView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\UserProfile\Components\UserStatusCard\Components\ProtectionStatusView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\UserProfile\Resources\Localization.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
     </EmbeddedResource>    
     <EmbeddedResource Update="Resources\Localization.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -507,36 +412,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Localization.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Features\UserLogOut\Resources\Localization.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Update="Features\Settings\Resources\Localization.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Localization.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Features\UserDeleteAccount\Resources\Localization.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Localization.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Features\AccountFeaturesInformation\Resources\Localization.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Localization.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Features\Account\Resources\Localization.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Localization.resx</DependentUpon>
-    </Compile>
     <Compile Update="Features\ApplyCode\Resources\Localization.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Localization.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Features\CreateProfile\Resources\Localization.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Localization.resx</DependentUpon>
@@ -561,28 +443,6 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
-    <Compile Update="Features\MedicalChangeStatus\Resources\Localization.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Localization.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Features\MedicalCodeSharing\MedicalCodeSharingPage.xaml.cs">
-      <DependentUpon>MedicalCodeSharingPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Features\MedicalCodeSharing\Components\Title\TitleSharingView.xaml.cs">
-      <DependentUpon>TitleSharingView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Features\MedicalChangeStatus\MedicalChangeStatusView.xaml.cs">
-      <DependentUpon>MedicalChangeStatusView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Features\MedicalCodeSharing\Resources\Localization.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Localization.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Features\MedicalLogin\Components\LogIn\MedicalLogInView.xaml.cs">
-      <DependentUpon>MedicalLogInView.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Features\NewsArticle\Resources\Localization.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -591,55 +451,15 @@
     <Compile Update="Features\Newsfeed\Components\News\NewsFilter.xaml.cs">
       <DependentUpon>NewsFilter.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Features\MedicalLogin\Resources\Localization.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Localization.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Features\Medical\Resources\Localization.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Localization.resx</DependentUpon>
-    </Compile>
     <Compile Update="Features\Newsfeed\NewsfeedPage.xaml.cs">
       <DependentUpon>NewsfeedPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Features\OnBoarding\Resources\Localization.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Localization.resx</DependentUpon>
     </Compile>
     <Compile Update="Features\Newsfeed\Resources\Localization.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Localization.resx</DependentUpon>
     </Compile>
-    <Compile Update="Features\UserDeleteAccount\DeleteAccountPage.xaml.cs">
-      <DependentUpon>DeleteAccountPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Features\Rumours\Resources\Localization.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Localization.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Features\UserLogIn\Resources\Localization.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Localization.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Features\UserProfile\Components\BluetoothReminder\BluetoothReminderView.xaml.cs">
-      <DependentUpon>BluetoothReminderView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Features\UserProfile\Components\EncryptionStatus\EncryptionStatusView.xaml.cs">
-      <DependentUpon>EncryptionStatusView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Features\UserProfile\Components\HealthStatusAdvice\HealthStatusAdviceView.xaml.cs">
-      <DependentUpon>HealthStatusAdviceView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Features\UserProfile\Components\UserStatusCard\Components\ProtectionStatusView.xaml.cs">
-      <DependentUpon>ProtectionStatusView.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Features\UserProfile\Resources\Localization.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Localization.resx</DependentUpon>
@@ -655,15 +475,7 @@
     <Compile Update="Features\Welcome\Resources\Localization.Designer.cs">
       <DependentUpon>Localization.resx</DependentUpon>
     </Compile>
-    <Compile Update="Features\UserLogOut\Resources\Localization.Designer.cs">
-      <DependentUpon>Localization.resx</DependentUpon>
-    </Compile>
     <Compile Update="Features\Settings\Resources\Localization.Designer.cs">
-      <DependentUpon>Localization.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Update="Features\UserDeleteAccount\Resources\Localization.Designer.cs">
       <DependentUpon>Localization.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -678,45 +490,23 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Features\AboutUs\Resources\Images\star.svg" />
-    <EmbeddedResource Include="Features\AccountFeaturesInformation\Resources\Images\hb_logo.svg" />
-    <EmbeddedResource Include="Features\AccountFeaturesInformation\Resources\Images\health_wellbeing.svg" />
-    <EmbeddedResource Include="Features\AccountFeaturesInformation\Resources\Images\highlight.svg" />
-    <EmbeddedResource Include="Features\AccountFeaturesInformation\Resources\Images\locked.svg" />
     <EmbeddedResource Include="Features\ChangeCountryProgram\Resources\Images\countryprogram_menu.svg" />
     <EmbeddedResource Include="Features\ChangeCountryProgram\Resources\Images\countryprogram_map.svg" />
     <EmbeddedResource Include="Features\ChangeCountryProgram\Resources\Images\countryprogram_rectangle.svg" />
     <EmbeddedResource Include="Features\ChangeLanguage\Resources\Images\globe.svg" />
-    <EmbeddedResource Include="Features\CreateProfile\Resources\Images\person.svg" />
-    <EmbeddedResource Include="Features\CreateProfile\Resources\Images\rectangle_create_profile.svg" />
-    <EmbeddedResource Include="Features\ExpiredToken\Resources\Images\session_logo.svg" />
     <EmbeddedResource Include="Features\Filters\Resources\Images\arrow_right.svg" />
     <EmbeddedResource Include="Features\ForceUpdate\Resources\Images\update_logo.svg" />
     <EmbeddedResource Include="Features\ChangeLanguage\Resources\Images\language_rectangle.svg" />
     <EmbeddedResource Include="Features\Maintenance\Resources\Images\maintenance_logo.svg" />
     <EmbeddedResource Include="Features\Newsfeed\Resources\Images\rectangle_news.svg" />
-    <EmbeddedResource Include="Features\OnBoarding\Resources\Images\completely_anonymous.svg" />
-    <EmbeddedResource Include="Features\OnBoarding\Resources\Images\tailored_for_you.svg" />
     <EmbeddedResource Include="Features\PrivacyPolicy\Resources\Images\key.svg" />
     <EmbeddedResource Include="Features\Components\CompletedView\Resources\Images\completed_rectangle.svg" />
     <EmbeddedResource Include="Features\Components\CompletedView\Resources\Images\completed_sign.svg" />
-    <EmbeddedResource Include="Features\PushNotifications\Resources\Images\important_notifications.svg" />
-    <EmbeddedResource Include="Features\OnBoarding\Resources\Images\man.svg">
-    </EmbeddedResource>
-    <EmbeddedResource Include="Features\PushNotifications\Resources\Images\notification_instruction1.svg" />
-    <EmbeddedResource Include="Features\PushNotifications\Resources\Images\notification_instruction2.svg" />
-    <EmbeddedResource Include="Features\PushNotifications\Resources\Images\notification_instruction3.svg" />
-    <EmbeddedResource Include="Features\OnBoarding\Resources\Images\plants.svg" />
     <EmbeddedResource Include="Features\Rumours\Resources\Images\rumours.svg" />
     <EmbeddedResource Include="Features\Rumours\Resources\Images\rumours_logo.svg" />
     <EmbeddedResource Include="Features\Rumours\Resources\Images\rumours_rectangle.svg" />
     <EmbeddedResource Include="Features\Settings\Resources\Images\arrow.svg" />
     <EmbeddedResource Include="Features\Settings\Resources\Images\language_setting.svg" />
-    <EmbeddedResource Include="Features\UserLogIn\Resources\Images\sign_in_person.svg" />
-    <EmbeddedResource Include="Features\UserProfile\Resources\Images\arrow_teal.svg" />
-    <EmbeddedResource Include="Features\UserProfile\Resources\Images\bluetooth.svg" />
-    <EmbeddedResource Include="Features\UserProfile\Resources\Images\encryption.svg" />
-    <EmbeddedResource Include="Features\UserProfile\Resources\Images\health_status_advice.svg" />
-    <EmbeddedResource Include="Features\UserProfile\Resources\Images\protecting.svg" />
     <EmbeddedResource Include="Features\Welcome\Resources\Images\hb_logo.svg" />
     <EmbeddedResource Include="Features\Welcome\Resources\Images\rectangle_welcome.svg" />
     <EmbeddedResource Include="Features\Welcome\Resources\Images\welcome_tail.svg" />
@@ -724,9 +514,7 @@
     <EmbeddedResource Include="Resources\Fonts\OpenSans-Regular.ttf" />
     <EmbeddedResource Include="Resources\Fonts\OpenSans-SemiBold.ttf" />
     <EmbeddedResource Include="Features\Menu\Resources\Images\arrow.svg" />
-    <EmbeddedResource Include="Features\UserLogOut\Resources\Images\logout.svg" />
     <EmbeddedResource Include="Features\Settings\Resources\Images\settings.svg" />
-    <EmbeddedResource Include="Features\UserDeleteAccount\Resources\Images\delete.svg" />
     <EmbeddedResource Include="Features\Polls\Resources\Images\poll.svg" />
     <EmbeddedResource Include="Features\Polls\Resources\Images\alowed_rectangle.svg" />
     <EmbeddedResource Include="Features\Polls\Resources\Images\restricted_rectangle.svg" />

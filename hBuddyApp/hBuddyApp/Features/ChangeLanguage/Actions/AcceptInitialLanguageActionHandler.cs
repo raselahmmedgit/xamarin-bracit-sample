@@ -17,7 +17,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using hBuddyApp.Features.Account.Services.Authentication;
+//using hBuddyApp.Features.Account.Services.Authentication;
 using hBuddyApp.Features.ChangeCountryProgram.Routes;
 using hBuddyApp.Features.Main.Routes;
 using hBuddyApp.Features.Welcome.Routes;
@@ -32,7 +32,7 @@ namespace hBuddyApp.Features.ChangeLanguage.Actions
         //private readonly IWelcomeRoute _welcomeRoute;
         private readonly IChangeCountryProgramRoute _changeCountryProgramRoute;
         private readonly IMainRoute _mainRoute;
-        private readonly IAuthenticationInfoService _authenticationInfoService;
+        //private readonly IAuthenticationInfoService _authenticationInfoService;
         private readonly INavigationServiceDelegate _navigationServiceDelegate;
 
         //public AcceptInitialLanguageActionHandler(IWelcomeRoute welcomeRoute, INavigationServiceDelegate navigationServiceDelegate)
@@ -48,26 +48,28 @@ namespace hBuddyApp.Features.ChangeLanguage.Actions
 
         public AcceptInitialLanguageActionHandler(IMainRoute mainRoute
             , IChangeCountryProgramRoute changeCountryProgramRoute
-            , IAuthenticationInfoService authenticationInfoService
+            //, IAuthenticationInfoService authenticationInfoService
             , INavigationServiceDelegate navigationServiceDelegate)
         {
             _mainRoute = mainRoute;
             _changeCountryProgramRoute = changeCountryProgramRoute;
-            _authenticationInfoService = authenticationInfoService;
+            //_authenticationInfoService = authenticationInfoService;
             _navigationServiceDelegate = navigationServiceDelegate;
         }
 
         protected override async Task Handle(AcceptInitialLanguageAction request, CancellationToken cancellationToken)
         {
-            if (_authenticationInfoService.IsAuthenticated()
-                && !_authenticationInfoService.IsAnonymous())
-            {
-                await _mainRoute.ExecuteAsync(_navigationServiceDelegate).ConfigureAwait(false);
-            }
-            else
-            {
-                await _changeCountryProgramRoute.ExecuteAsync(_navigationServiceDelegate).ConfigureAwait(false);
-            }
+            //if (_authenticationInfoService.IsAuthenticated()
+            //    && !_authenticationInfoService.IsAnonymous())
+            //{
+            //    await _mainRoute.ExecuteAsync(_navigationServiceDelegate).ConfigureAwait(false);
+            //}
+            //else
+            //{
+            //    await _changeCountryProgramRoute.ExecuteAsync(_navigationServiceDelegate).ConfigureAwait(false);
+            //}
+
+            await _mainRoute.ExecuteAsync(_navigationServiceDelegate).ConfigureAwait(false);
         }
     }
 }

@@ -15,8 +15,8 @@
 // =========================================================================
 
 using System;
-using hBuddyApp.Features.Account.Services.Authentication;
-using hBuddyApp.Features.PushNotifications.Services;
+//using hBuddyApp.Features.Account.Services.Authentication;
+//using hBuddyApp.Features.PushNotifications.Services;
 using Microsoft.Extensions.Logging;
 using Prism.Navigation;
 
@@ -24,17 +24,17 @@ namespace hBuddyApp.Features.Main
 {
     public class MainViewModel : ViewModelBase
     {
-        private readonly IPushNotificationsService _pushNotificationsService;
-        private readonly IAuthenticationInfoService _authenticationInfoService;
+        //private readonly IPushNotificationsService _pushNotificationsService;
+        //private readonly IAuthenticationInfoService _authenticationInfoService;
         private readonly ILogger _logger;
 
         public MainViewModel(
-            IPushNotificationsService pushNotificationsService,
-            IAuthenticationInfoService authenticationInfoService,
+            //IPushNotificationsService pushNotificationsService,
+            //IAuthenticationInfoService authenticationInfoService,
             ILoggerFactory loggerFactory)
         {
-            _pushNotificationsService = pushNotificationsService;
-            _authenticationInfoService = authenticationInfoService;
+            //_pushNotificationsService = pushNotificationsService;
+            //_authenticationInfoService = authenticationInfoService;
             _logger = loggerFactory.CreateLogger<MainViewModel>();
         }
 
@@ -42,11 +42,11 @@ namespace hBuddyApp.Features.Main
         {
             base.Initialize(parameters);
 
-            if (_authenticationInfoService.IsAuthenticated()
-                && !_authenticationInfoService.IsAnonymous())
-            {
-                _pushNotificationsService.UpdateTokenAsync().FireAndForget();
-            }
+            //if (_authenticationInfoService.IsAuthenticated()
+            //    && !_authenticationInfoService.IsAnonymous())
+            //{
+            //    _pushNotificationsService.UpdateTokenAsync().FireAndForget();
+            //}
         }
     }
 }

@@ -21,7 +21,7 @@ using hBuddyApp.Services.Http.ExceptionsHandling;
 
 namespace hBuddyApp.Features.ApplyCode.Services
 {
-    public class UserStatusChangeServiceErrorHandler : ErrorResponseHandler, IUserStatusChangeServiceErrorHandler
+    public class UserStatusChangeServiceErrorHandler : ErrorResponseHandler//, IUserStatusChangeServiceErrorHandler
     {
         public UserStatusChangeServiceErrorHandler(IHttpExceptionContextRetriever httpExceptionContextRetriever)
             : base(httpExceptionContextRetriever)

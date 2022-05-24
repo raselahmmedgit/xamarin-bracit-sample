@@ -19,7 +19,7 @@ using System.Globalization;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 
-using hBuddyApp.Features.UserProfile.Services;
+//using hBuddyApp.Features.UserProfile.Services;
 using hBuddyApp.Services.Serialization;
 using Microsoft.Extensions.Logging;
 using ReactiveUI;
@@ -34,18 +34,18 @@ namespace hBuddyApp.Features.Chat.Handlers
 
         private readonly ISerializer _serializer;
         private readonly Interaction<Message, bool> _sendInteraction;
-        private readonly IUserAccountContainer _userAccountContainer;
+        //private readonly IUserAccountContainer _userAccountContainer;
         private ILogger _logger;
 
         public MessageInteractor(
             ILoggerFactory loggerFactory,
             ISerializer serializer,
-            IUserAccountContainer userAccountContainer,
+            //IUserAccountContainer userAccountContainer,
             Interaction<Message, bool> sendInteraction)
         {
             _logger = loggerFactory.CreateLogger<MessageInteractor>();
             _serializer = serializer;
-            _userAccountContainer = userAccountContainer;
+            //_userAccountContainer = userAccountContainer;
             _sendInteraction = sendInteraction;
         }
 
@@ -54,13 +54,13 @@ namespace hBuddyApp.Features.Chat.Handlers
             var result = false;
             try
             {
-                var userAccount = await _userAccountContainer.GetAsync().ConfigureAwait(false);
-                var sessionId = userAccount?.UserAccount?.UserId != null ? $"{initPrefix ?? initPhrase}_{userAccount.UserAccount.UserId}" : null;
+                //var userAccount = await _userAccountContainer.GetAsync().ConfigureAwait(false);
+                //var sessionId = userAccount?.UserAccount?.UserId != null ? $"{initPrefix ?? initPhrase}_{userAccount.UserAccount.UserId}" : null;
                 var payload = new InitPayload
                 {
                     InitPhrase = initPhrase,
                     Language = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName,
-                    UserId = sessionId
+                    //UserId = sessionId
                 };
                 var serializedPayload = await _serializer.SerializeAsync(payload).ConfigureAwait(false);
                 var message = new Message

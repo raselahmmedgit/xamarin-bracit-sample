@@ -16,11 +16,11 @@
 
 using System.Threading.Tasks;
 using Prism.Navigation;
-using hBuddyApp.Features.AccountFeaturesInformation;
+//using hBuddyApp.Features.AccountFeaturesInformation;
 using MediatR;
 using ReactiveUI;
 using Unit = System.Reactive.Unit;
-using hBuddyApp.Features.CreateProfile;
+//using hBuddyApp.Features.CreateProfile;
 using System.Reactive.Disposables;
 using hBuddyApp.Features.Analytics;
 using hBuddyApp.Utils;
@@ -43,9 +43,9 @@ namespace hBuddyApp.Features.Welcome
             _mediator = mediator;
             _navigationService = navigationService;
 
-            GoToCreateProfile = ReactiveCommand.CreateFromTask(HandleGoToCreateProfileAsync);
-            LogInCommand = ReactiveCommand.CreateFromTask(HandleLogInAsync);
-            GoAnonymouslyCommand = ReactiveCommand.CreateFromTask(HandleAnonymousAsync);
+            //GoToCreateProfile = ReactiveCommand.CreateFromTask(HandleGoToCreateProfileAsync);
+            //LogInCommand = ReactiveCommand.CreateFromTask(HandleLogInAsync);
+            //GoAnonymouslyCommand = ReactiveCommand.CreateFromTask(HandleAnonymousAsync);
         }
 
         public override void OnActivated(CompositeDisposable lifecycleDisposable)
@@ -55,19 +55,19 @@ namespace hBuddyApp.Features.Welcome
             AnalyticsProvider.Instance.LogViewModel(nameof(WelcomePageViewModel));
         }
 
-        private async Task HandleLogInAsync()
-        {
-            await _mediator.Send(new NavigateToLogInAction());
-        }
+        //private async Task HandleLogInAsync()
+        //{
+        //    await _mediator.Send(new NavigateToLogInAction());
+        //}
 
-        private async Task HandleGoToCreateProfileAsync()
-        {
-            await _mediator.Send(new AccountFeaturesInformationAction("Registered"));
-        }
+        //private async Task HandleGoToCreateProfileAsync()
+        //{
+        //    await _mediator.Send(new AccountFeaturesInformationAction("Registered"));
+        //}
 
-        private async Task HandleAnonymousAsync()
-        {
-            await _mediator.Send(new AccountFeaturesInformationAction("Anonymous"));
-        }
+        //private async Task HandleAnonymousAsync()
+        //{
+        //    await _mediator.Send(new AccountFeaturesInformationAction("Anonymous"));
+        //}
     }
 }

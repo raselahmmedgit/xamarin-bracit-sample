@@ -32,7 +32,7 @@ namespace hBuddyApp.Features.ApplyCode
     public class ApplyCodeViewModel : ViewModelBase
     {
         private readonly IMediator _mediator;
-        private readonly IUserStatusChangeService _userStatusChangeService;
+        //private readonly IUserStatusChangeService _userStatusChangeService;
         private readonly IErrorHandler _errorHandler;
 
         private string _codeValue;
@@ -56,10 +56,10 @@ namespace hBuddyApp.Features.ApplyCode
 
         public ApplyCodeViewModel(
             IMediator mediator,
-            IUserStatusChangeService userStatusChangeService,
+            //IUserStatusChangeService userStatusChangeService,
             IErrorHandler errorHandler)
         {
-            _userStatusChangeService = userStatusChangeService;
+            //_userStatusChangeService = userStatusChangeService;
             _errorHandler = errorHandler;
 
             var canApplyCode = this.WhenAnyValue(
@@ -95,12 +95,12 @@ namespace hBuddyApp.Features.ApplyCode
                     return;
                 }
 
-                var userProfile = await _userStatusChangeService.ApplyStatusChangeCode(code);
+                //var userProfile = await _userStatusChangeService.ApplyStatusChangeCode(code);
 
-                if (userProfile != null)
-                {
-                    await _mediator.Send(new CodeAppliedAction());
-                }
+                //if (userProfile != null)
+                //{
+                //    await _mediator.Send(new CodeAppliedAction());
+                //}
             }
             catch (Exception e)
             {

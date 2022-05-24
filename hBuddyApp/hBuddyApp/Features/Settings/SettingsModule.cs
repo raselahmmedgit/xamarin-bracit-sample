@@ -18,7 +18,7 @@ using hBuddyApp.Features.ChangeLanguage.SettingsComponents;
 using hBuddyApp.Features.ComponentsManagement;
 using hBuddyApp.Features.Menu;
 using hBuddyApp.Features.Menu.Components;
-using hBuddyApp.Features.PushNotifications.SettingsComponents;
+//using hBuddyApp.Features.PushNotifications.SettingsComponents;
 using hBuddyApp.Features.Regions;
 using hBuddyApp.Features.Settings.Components;
 using hBuddyApp.Features.Settings.MenuComponents;
@@ -43,10 +43,10 @@ namespace hBuddyApp.Features.Settings
             containerRegistry.RegisterForNavigation<SettingsPage, SettingsViewModel>();
             containerRegistry.Register<ISettingsRoute, SettingsRoute>();
 
-            RegionManager.RegisterFunctionalityToTheRegion<NotificationsComponentService>(
-                SettingsViewModel.SettingsRegionIdentifier,
-                DataTemplateProviderFactory.CreatePlainFor<NotificationsItemView>());
-            containerRegistry.Register<NotificationsItemViewModel>();
+            //RegionManager.RegisterFunctionalityToTheRegion<NotificationsComponentService>(
+            //    SettingsViewModel.SettingsRegionIdentifier,
+            //    DataTemplateProviderFactory.CreatePlainFor<NotificationsItemView>());
+            //containerRegistry.Register<NotificationsItemViewModel>();
 
             //RegionManager.RegisterFunctionalityToTheRegion<LanguageSettingsComponentService>(
             //    SettingsViewModel.SettingsRegionIdentifier,

@@ -19,7 +19,7 @@ using hBuddyApp.Features.ChangeCountryProgram.Routes;
 using hBuddyApp.Features.Components.InfoView;
 using hBuddyApp.Features.RapidProFcmPushNotifications;
 using hBuddyApp.Features.RapidProFcmPushNotifications.Services;
-using hBuddyApp.Features.UserProfile.Services;
+//using hBuddyApp.Features.UserProfile.Services;
 using hBuddyApp.Services.Navigation;
 using hBuddyApp.Services.Notification;
 using Microsoft.Extensions.Logging;
@@ -47,7 +47,7 @@ namespace hBuddyApp.Features.Polls
         private readonly ILogger _logger;
         //private readonly IMessagesProcessor _messagesProcessor;
         //private readonly IMessageInteractor _messageInteractor;
-        private readonly IUserAccountContainer _userAccountContainer;
+        //private readonly IUserAccountContainer _userAccountContainer;
         //private readonly IAccountInformationContainer _accountContainer;
         //private readonly IMediator _mediator;
         private readonly INotificationManager _notificationManager;
@@ -93,7 +93,7 @@ namespace hBuddyApp.Features.Polls
         public string InputText { get; set; }
         public string RapidProMessageId { get; set; }
         public string ActionInputText { get; set; }
-        public UserAccountInfo _userAccountInfo { get; set; }
+        //public UserAccountInfo _userAccountInfo { get; set; }
 
 
         public ICommand OnSendCommand { get; set; }
@@ -130,7 +130,7 @@ namespace hBuddyApp.Features.Polls
 
         public PollsViewModel(
             ILoggerFactory loggerFactory,
-            IUserAccountContainer userAccountContainer,
+            //IUserAccountContainer userAccountContainer,
             INotificationManager notificationManager,
             IChangeCountryProgramRoute changeCountryProgramRoute,
             INavigationServiceDelegate navigationServiceDelegate)
@@ -151,7 +151,7 @@ namespace hBuddyApp.Features.Polls
             //HandleMessageCommand = ReactiveCommand.CreateFromTask<Message>(HandleMessageAsync);
             //SendCommand = ReactiveCommand.CreateFromTask(SendAsync);
 
-            _userAccountContainer = userAccountContainer;
+            //_userAccountContainer = userAccountContainer;
 
             IsBusy = true;
 
@@ -478,7 +478,7 @@ namespace hBuddyApp.Features.Polls
 
             try
             {
-                _userAccountInfo = await _userAccountContainer.GetAsync().ConfigureAwait(false);
+                //_userAccountInfo = await _userAccountContainer.GetAsync().ConfigureAwait(false);
 
                 if (_rapidProContainer.RapidProIsDatabase == true && _rapidProContainer.RapidProIsInitMsg == true)
                 {
@@ -556,8 +556,10 @@ namespace hBuddyApp.Features.Polls
                     //if (_rapidProContainer.RapidProIsInit == true && _rapidProContainer.RapidProIsInitMsg == true)
                     if (_rapidProContainer.RapidProIsInit == true)
                     {
-                        string user = _userAccountInfo.IsAnonymous ? MessageUserEnum.UserAnonymous.ToDescriptionAttr() : MessageUserEnum.UserLogin.ToDescriptionAttr();
-                        string userName = _userAccountInfo.UserAccount != null ? _userAccountInfo.UserAccount.Username : string.Empty;
+                        //string user = _userAccountInfo.IsAnonymous ? MessageUserEnum.UserAnonymous.ToDescriptionAttr() : MessageUserEnum.UserLogin.ToDescriptionAttr();
+                        //string userName = _userAccountInfo.UserAccount != null ? _userAccountInfo.UserAccount.Username : string.Empty;
+                        string user = MessageUserEnum.UserAnonymous.ToDescriptionAttr();
+                        string userName = string.Empty;
                         var rapidProMessage = new RapidProMessage() { PId = Guid.NewGuid().ToString(), Text = inputText, Value = inputText, User = user, UserName = userName, ChannelId = _firebaseContainer.FirebaseChannelId, Type = MessageTypeEnum.Polls.ToDescriptionAttr(), CreatedDateTime = DateTime.UtcNow };
                         InsertPollsRapidProMessage(rapidProMessage);
 

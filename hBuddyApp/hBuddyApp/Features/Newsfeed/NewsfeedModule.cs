@@ -19,7 +19,7 @@ using hBuddyApp.Features.Newsfeed.Components.News;
 using hBuddyApp.Features.Newsfeed.Routes;
 using hBuddyApp.Features.Newsfeed.Services;
 using hBuddyApp.Features.Regions;
-using hBuddyApp.Features.UserProfile.Components.HealthStatusAdvice;
+//using hBuddyApp.Features.UserProfile.Components.HealthStatusAdvice;
 using Prism.Ioc;
 using Prism.Modularity;
 
@@ -36,10 +36,10 @@ namespace hBuddyApp.Features.Newsfeed
             containerRegistry.RegisterForNavigation<NewsfeedPage, NewsfeedViewModel>();
             containerRegistry.Register<INewsfeedRoute, NewsfeedRoute>();
             containerRegistry.Register<NewsArticleItemViewModel>();
-            containerRegistry.Register<HealthStatusAdviceViewModel>();
+            //containerRegistry.Register<HealthStatusAdviceViewModel>();
             containerRegistry.RegisterSingleton<INewsfeedService, NewsfeedService>();
 
-            containerRegistry.Register<HealthStatusAdviceComponentService>();
+            //containerRegistry.Register<HealthStatusAdviceComponentService>();
             containerRegistry.Register<NewsComponentService>();
 
             RegionManager.RegisterFunctionalityToTheRegion<NewsComponentService>(NewsfeedViewModel.HomeRegionIdentifier, new NewsDataTemplateProvider());

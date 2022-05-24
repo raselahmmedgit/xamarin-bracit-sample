@@ -19,23 +19,31 @@ using System.Collections.Generic;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 using hBuddyApp.Features.ComponentsManagement;
-using hBuddyApp.Features.UserProfile.Services;
+//using hBuddyApp.Features.UserProfile.Services;
 using Prism.Ioc;
 
 namespace hBuddyApp.Features.SettingsChangeCountryProgram.MenuComponents
 {
     public class SettingsChangeCountryProgramComponentService : StatelessComponentServiceBase
     {
-        private readonly IUserAccountContainer _userAccountContainer;
+        //private readonly IUserAccountContainer _userAccountContainer;
         private TaskCompletionSource<bool> _initializedSource = new TaskCompletionSource<bool>();
 
+        //public SettingsChangeCountryProgramComponentService(
+        //    IContainerProvider containerProvider,
+        //    IUserAccountContainer userAccountContainer)
+        //    : base(containerProvider)
+        //{
+        //    _userAccountContainer = userAccountContainer;
+
+        //    // TaskCompletionSource is required to prevent any further execution until constructor is completed.
+        //    _initializedSource.SetResult(true);
+        //}
+
         public SettingsChangeCountryProgramComponentService(
-            IContainerProvider containerProvider,
-            IUserAccountContainer userAccountContainer)
+            IContainerProvider containerProvider)
             : base(containerProvider)
         {
-            _userAccountContainer = userAccountContainer;
-
             // TaskCompletionSource is required to prevent any further execution until constructor is completed.
             _initializedSource.SetResult(true);
         }
@@ -50,8 +58,8 @@ namespace hBuddyApp.Features.SettingsChangeCountryProgram.MenuComponents
         private async Task<IList<Type>> GetComponentTypesByProfileAsync()
         {
             await _initializedSource.Task;
-            var profile = await _userAccountContainer.GetAsync().ConfigureAwait(false);
-            var roles = profile?.UserAccount?.Roles;
+            //var profile = await _userAccountContainer.GetAsync().ConfigureAwait(false);
+            //var roles = profile?.UserAccount?.Roles;
 
             //if (roles != null && roles.Count > 0)
             //{
