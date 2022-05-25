@@ -178,15 +178,15 @@ namespace hBuddyApp.Droid
             // There is no need to create a notification channel on older versions of Android.
             if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
             {
-                var channelName = hBuddyApp.Configuration.Constants.PushNotificationsConstants.NotificationChannelName;
-                var channelDescription = string.Empty;
-                var channel = new NotificationChannel(channelName, channelName, NotificationImportance.Default)
-                {
-                    Description = channelDescription
-                };
+                //var channelName = hBuddyApp.Configuration.Constants.PushNotificationsConstants.NotificationChannelName;
+                //var channelDescription = string.Empty;
+                //var channel = new NotificationChannel(channelName, channelName, NotificationImportance.Default)
+                //{
+                //    Description = channelDescription
+                //};
 
-                var notificationManager = (NotificationManager)GetSystemService(NotificationService);
-                notificationManager.CreateNotificationChannel(channel);
+                //var notificationManager = (NotificationManager)GetSystemService(NotificationService);
+                //notificationManager.CreateNotificationChannel(channel);
             }
         }
     }

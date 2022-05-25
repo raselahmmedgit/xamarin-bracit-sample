@@ -27,7 +27,7 @@ using hBuddyApp.Services.Http.RequestIdHandling;
 using hBuddyApp.Services.Http.SessionContainer;
 using hBuddyApp.Services.Localization;
 using hBuddyApp.Services.Platform;
-using hBuddyApp.Services.Security;
+//using hBuddyApp.Services.Security;
 using DryIoc;
 using FFImageLoading;
 using Prism.DryIoc.Extensions;
@@ -42,7 +42,7 @@ namespace hBuddyApp.Services.Feature
         {
             // Application base services registration
             moduleCatalog.AddModule<Services.Serialization.SerializationModule>(InitializationMode.WhenAvailable);
-            moduleCatalog.AddModule<SecurityModule>(InitializationMode.WhenAvailable);
+            //moduleCatalog.AddModule<SecurityModule>(InitializationMode.WhenAvailable);
             moduleCatalog.AddModule<Services.Dispatcher.DispatcherModule>(InitializationMode.WhenAvailable);
             moduleCatalog.AddModule<Services.Storage.StorageModule>(InitializationMode.WhenAvailable);
             moduleCatalog.AddModule<Services.Notification.NotificationModule>(InitializationMode.WhenAvailable);

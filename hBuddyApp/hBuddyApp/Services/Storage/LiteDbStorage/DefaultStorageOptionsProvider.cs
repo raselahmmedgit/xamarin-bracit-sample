@@ -15,28 +15,28 @@
 // =========================================================================
 
 using System.Threading.Tasks;
-using hBuddyApp.Services.Security.SecretsProvider;
+//using hBuddyApp.Services.Security.SecretsProvider;
 
 namespace hBuddyApp.Services.Storage.LiteDbStorage
 {
     public class DefaultStorageOptionsProvider : IStorageOptionsProvider
     {
-        private readonly ISecretsProvider _secretsProvider;
+        //private readonly ISecretsProvider _secretsProvider;
         private StorageOptions _options;
 
-        public DefaultStorageOptionsProvider(ISecretsProvider secretsProvider)
-        {
-            _secretsProvider = secretsProvider;
-        }
+        //public DefaultStorageOptionsProvider(ISecretsProvider secretsProvider)
+        //{
+        //    _secretsProvider = secretsProvider;
+        //}
 
         public async Task<StorageOptions> GetAsync()
         {
             if (_options == null)
             {
-                var encryptionKey = await _secretsProvider.GetEncryptionKeyAsync();
+                //var encryptionKey = await _secretsProvider.GetEncryptionKeyAsync();
                 _options = new StorageOptions()
                 {
-                    EncryptionKey = encryptionKey,
+                    //EncryptionKey = encryptionKey,
                 };
             }
 

@@ -14,7 +14,7 @@
 // limitations under the License.
 // =========================================================================
 
-using hBuddyApp.Services.Security.SecretsProvider;
+//using hBuddyApp.Services.Security.SecretsProvider;
 using hBuddyApp.Services.Storage.LiteDbStorage;
 using Microsoft.Extensions.Logging;
 using Prism.Ioc;
@@ -30,11 +30,11 @@ namespace hBuddyApp.Services.Storage
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingletonFromDelegate<IStorageOptionsProvider>(container =>
-            {
-                var provider = container.Resolve<ISecretsProvider>();
-                return new DefaultStorageOptionsProvider(provider);
-            });
+            //containerRegistry.RegisterSingletonFromDelegate<IStorageOptionsProvider>(container =>
+            //{
+            //    var provider = container.Resolve<ISecretsProvider>();
+            //    return new DefaultStorageOptionsProvider(provider);
+            //});
             containerRegistry.RegisterSingleton<IStorageService, StorageService>();
         }
     }

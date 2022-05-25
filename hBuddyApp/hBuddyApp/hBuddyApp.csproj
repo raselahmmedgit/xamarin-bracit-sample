@@ -24,6 +24,7 @@
     <Compile Remove="Features\UserLogOut\**" />
     <Compile Remove="Features\UserProfile\**" />
     <Compile Remove="Features\UserState\**" />
+    <Compile Remove="Services\Security\**" />
     <EmbeddedResource Remove="Features\AccountFeaturesInformation\**" />
     <EmbeddedResource Remove="Features\Account\**" />
     <EmbeddedResource Remove="Features\AnonymousProfile\**" />
@@ -41,6 +42,7 @@
     <EmbeddedResource Remove="Features\UserLogOut\**" />
     <EmbeddedResource Remove="Features\UserProfile\**" />
     <EmbeddedResource Remove="Features\UserState\**" />
+    <EmbeddedResource Remove="Services\Security\**" />
     <None Remove="Features\AccountFeaturesInformation\**" />
     <None Remove="Features\Account\**" />
     <None Remove="Features\AnonymousProfile\**" />
@@ -58,6 +60,7 @@
     <None Remove="Features\UserLogOut\**" />
     <None Remove="Features\UserProfile\**" />
     <None Remove="Features\UserState\**" />
+    <None Remove="Services\Security\**" />
     <Compile Remove="Features\ApplyCode\Services\IUserStatusChangeService.cs" />
     <Compile Remove="Features\ApplyCode\Services\IUserStatusChangeServiceErrorHandler.cs" />
     <Compile Remove="Features\ApplyCode\Services\UserStatusChangeService.cs" />

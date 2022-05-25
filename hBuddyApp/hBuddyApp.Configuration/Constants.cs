@@ -36,18 +36,18 @@ namespace hBuddyApp.Configuration
             public static readonly string Secret_Android = Configuration.Helpers.Secrets.AppCenter_Android_Secret;
         }
 
-        public static class SecretsProviderConstants
-        {
-            public static readonly string EncryptionKeyFieldName = Configuration.Helpers.Secrets.SecretsProvider_EncryptionKeyFieldName;
-            public static readonly string DeviceIdentifierFieldName = Configuration.Helpers.Secrets.SecretsProvider_DeviceIdentifierFieldName;
-            public static readonly string InitializedFlagFieldName = Configuration.Helpers.Secrets.SecretsProvider_InitializedFlagFieldName;
-            public static readonly string IsFirstRunFieldName = Configuration.Helpers.Secrets.SecretsProvider_IsFirstRunFieldName;
-        }
+        //public static class SecretsProviderConstants
+        //{
+        //    public static readonly string EncryptionKeyFieldName = Configuration.Helpers.Secrets.SecretsProvider_EncryptionKeyFieldName;
+        //    public static readonly string DeviceIdentifierFieldName = Configuration.Helpers.Secrets.SecretsProvider_DeviceIdentifierFieldName;
+        //    public static readonly string InitializedFlagFieldName = Configuration.Helpers.Secrets.SecretsProvider_InitializedFlagFieldName;
+        //    public static readonly string IsFirstRunFieldName = Configuration.Helpers.Secrets.SecretsProvider_IsFirstRunFieldName;
+        //}
 
-        public static class PushNotificationsConstants
-        {
-            public static readonly string NotificationChannelName = Configuration.Helpers.Secrets.PushNotifications_NotificationChannelName;
-        }
+        //public static class PushNotificationsConstants
+        //{
+        //    public static readonly string NotificationChannelName = Configuration.Helpers.Secrets.PushNotifications_NotificationChannelName;
+        //}
 
         public static class CacheExpirationConstants
         {

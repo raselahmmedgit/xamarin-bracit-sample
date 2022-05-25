@@ -15,22 +15,22 @@
 // =========================================================================
 
 using System.Threading.Tasks;
-using hBuddyApp.Services.Security.SecureVault;
+//using hBuddyApp.Services.Security.SecureVault;
 using hBuddyApp.Services.Serialization;
 
 namespace hBuddyApp.Services.Http.SessionContainer
 {
     public class SessionContainer : ISessionContainer
     {
-        private readonly ISecureVault _secureVault;
+        //private readonly ISecureVault _secureVault;
         private readonly ISerializer _serializer;
         private const string SessionInfoKey = "SessionInfoKey";
 
         public SessionContainer(
-            ISecureVault secureVault,
+            //ISecureVault secureVault,
             ISerializer serializer)
         {
-            _secureVault = secureVault;
+            //_secureVault = secureVault;
             _serializer = serializer;
         }
 
@@ -38,25 +38,27 @@ namespace hBuddyApp.Services.Http.SessionContainer
         {
             if (sessionInfo == null)
             {
-                await _secureVault.RemoveAsync(SessionInfoKey).ConfigureAwait(false);
+                //await _secureVault.RemoveAsync(SessionInfoKey).ConfigureAwait(false);
             }
 
             var serializedString = await _serializer.SerializeAsync(sessionInfo).ConfigureAwait(false);
-            await _secureVault.SetAsync(SessionInfoKey, serializedString).ConfigureAwait(false);
+            //await _secureVault.SetAsync(SessionInfoKey, serializedString).ConfigureAwait(false);
         }
 
         public async Task<SessionInfo> GetAsync()
         {
             try
             {
-                var serializedString = await _secureVault.GetAsync(SessionInfoKey).ConfigureAwait(false);
-                if (string.IsNullOrEmpty(serializedString))
-                {
-                    return null;
-                }
+                //var serializedString = await _secureVault.GetAsync(SessionInfoKey).ConfigureAwait(false);
+                //if (string.IsNullOrEmpty(serializedString))
+                //{
+                //    return null;
+                //}
 
-                var sessionInfo = await _serializer.DeserializeAsync<SessionInfo>(serializedString).ConfigureAwait(false);
-                return sessionInfo;
+                //var sessionInfo = await _serializer.DeserializeAsync<SessionInfo>(serializedString).ConfigureAwait(false);
+                //return sessionInfo;
+
+                return null;
             }
             catch
             {

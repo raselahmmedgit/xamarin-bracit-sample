@@ -26,10 +26,10 @@ namespace hBuddyApp.Services.Security.SecretsProvider.Internal
     public class DefaultSecretsProvider : ISecretsProvider
     {
         private readonly ISecureVault _secureVault;
-        private static readonly string EncryptionKeyFieldName = Configuration.Constants.SecretsProviderConstants.EncryptionKeyFieldName;
-        private static readonly string DeviceIdentifierFieldName = Configuration.Constants.SecretsProviderConstants.DeviceIdentifierFieldName;
-        private static readonly string InitializedFlagFieldName = Configuration.Constants.SecretsProviderConstants.InitializedFlagFieldName;
-        private static readonly string IsFirstRunFieldName = Configuration.Constants.SecretsProviderConstants.IsFirstRunFieldName;
+        //private static readonly string EncryptionKeyFieldName = Configuration.Constants.SecretsProviderConstants.EncryptionKeyFieldName;
+        //private static readonly string DeviceIdentifierFieldName = Configuration.Constants.SecretsProviderConstants.DeviceIdentifierFieldName;
+        //private static readonly string InitializedFlagFieldName = Configuration.Constants.SecretsProviderConstants.InitializedFlagFieldName;
+        //private static readonly string IsFirstRunFieldName = Configuration.Constants.SecretsProviderConstants.IsFirstRunFieldName;
 
         public DefaultSecretsProvider(ISecureVault secureVault)
         {

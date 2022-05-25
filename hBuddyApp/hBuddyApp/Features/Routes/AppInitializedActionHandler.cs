@@ -31,39 +31,39 @@ using MediatR;
 
 namespace hBuddyApp.Features.Routes
 {
-    public class AppInitializedActionHandler : AsyncRequestHandler<AppInitializedAction>, IRequestHandler<AppInitializedAction, Unit>
+    public class AppInitializedActionHandler : AsyncRequestHandler<AppInitializedAction>//, IRequestHandler<AppInitializedAction, Unit>
     {
-        private readonly IMediator _mediator;
-        private readonly IMainStartupRoute _mainStartupRoute;
-        private readonly IChangeLanguageRoute _changeLanguageRoute;
+        //private readonly IMediator _mediator;
+        //private readonly IMainStartupRoute _mainStartupRoute;
+        //private readonly IChangeLanguageRoute _changeLanguageRoute;
         //private readonly IOnBoardingRoute _onBoardingRoute;
         private readonly IWelcomeRoute _welcomeRoute;
         //private readonly IAuthenticationInfoService _authenticationInfoService;
-        private readonly IAppPreferencesService _appPreferencesService;
+        //private readonly IAppPreferencesService _appPreferencesService;
         private readonly INavigationServiceDelegate _navigationServiceDelegate;
         private readonly ILocalizationService _localizationService;
 
-        private static readonly string IsFirstRunFieldName = Configuration.Constants.SecretsProviderConstants.IsFirstRunFieldName;
+        //private static readonly string IsFirstRunFieldName = Configuration.Constants.SecretsProviderConstants.IsFirstRunFieldName;
 
         public AppInitializedActionHandler(
-            IMediator mediator,
-            IMainStartupRoute mainStartupRoute,
+            //IMediator mediator,
+            //IMainStartupRoute mainStartupRoute,
             //IOnBoardingRoute onBoardingRoute,
             IWelcomeRoute welcomeRoute,
             //IAuthenticationInfoService authenticationInfoService,
-            IAppPreferencesService appPreferencesService,
+            //IAppPreferencesService appPreferencesService,
             INavigationServiceDelegate navigationServiceDelegate,
-            IChangeLanguageRoute changeLanguageRoute,
+            //IChangeLanguageRoute changeLanguageRoute,
             ILocalizationService localizationService)
         {
-            _mediator = mediator;
-            _mainStartupRoute = mainStartupRoute;
+            //_mediator = mediator;
+            //_mainStartupRoute = mainStartupRoute;
             //_onBoardingRoute = onBoardingRoute;
             _welcomeRoute = welcomeRoute;
             //_authenticationInfoService = authenticationInfoService;
-            _appPreferencesService = appPreferencesService;
+            //_appPreferencesService = appPreferencesService;
             _navigationServiceDelegate = navigationServiceDelegate;
-            _changeLanguageRoute = changeLanguageRoute;
+            //_changeLanguageRoute = changeLanguageRoute;
             _localizationService = localizationService;
         }
 

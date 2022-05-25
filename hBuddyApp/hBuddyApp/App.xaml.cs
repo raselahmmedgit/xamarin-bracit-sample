@@ -221,11 +221,11 @@ namespace hBuddyApp
         {
             SetupLogger(containerRegistry);
 
-            if (IsInitialized)
-            {
-                // Registration was executed in this application session.
-                return;
-            }
+            //if (IsInitialized)
+            //{
+            //    // Registration was executed in this application session.
+            //    return;
+            //}
 
             ConfigureRegionManager();
             ConfigureMainPage();
@@ -452,7 +452,7 @@ namespace hBuddyApp
             moduleCatalog.AddModule<Services.CleanUp.CleanUpModule>();
             //moduleCatalog.AddModule<Features.Account.Handlers.AuthenticationInfoCleanUpHandlerModule>();
             moduleCatalog.AddModule<Services.Storage.Handlers.StorageCleanUpHandlerModule>();
-            moduleCatalog.AddModule<Services.Security.Handlers.SecretsCleanUpHandlerModule>();
+            //moduleCatalog.AddModule<Services.Security.Handlers.SecretsCleanUpHandlerModule>();
         }
 
         private void ConfigureRegionManager()

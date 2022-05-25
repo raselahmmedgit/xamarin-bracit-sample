@@ -19,7 +19,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reactive;
 using System.Threading.Tasks;
-using hBuddyApp.Services.Security.SecretsProvider;
+//using hBuddyApp.Services.Security.SecretsProvider;
 using DynamicData;
 using Prism.Navigation;
 using ReactiveUI;
@@ -63,8 +63,8 @@ namespace hBuddyApp.Features.Debugging
 
         private async Task InitializeAsync()
         {
-            var deviceId = await SecretsProvider.Instance.GetDeviceIdentifierAsync();
-            DeviceId = deviceId;
+            //var deviceId = await SecretsProvider.Instance.GetDeviceIdentifierAsync();
+            //DeviceId = deviceId;
             await RefreshContactedDevicesAsync();
         }
 
