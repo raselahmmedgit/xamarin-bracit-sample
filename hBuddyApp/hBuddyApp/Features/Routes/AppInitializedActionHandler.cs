@@ -31,7 +31,7 @@ using MediatR;
 
 namespace hBuddyApp.Features.Routes
 {
-    public class AppInitializedActionHandler : AsyncRequestHandler<AppInitializedAction>//, IRequestHandler<AppInitializedAction, Unit>
+    public class AppInitializedActionHandler : AsyncRequestHandler<AppInitializedAction>, IRequestHandler<AppInitializedAction, Unit>
     {
         //private readonly IMediator _mediator;
         //private readonly IMainStartupRoute _mainStartupRoute;
