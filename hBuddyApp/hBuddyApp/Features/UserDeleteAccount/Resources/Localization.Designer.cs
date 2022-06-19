@@ -70,7 +70,7 @@ namespace hBuddyApp.Features.UserDeleteAccount.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to By clicking on Delete account, you will be logged out of your session and you will not be able to login with the same credentials in the future.  When you delete your account, all your data will be deleted.
+        ///   Looks up a localized string similar to When you delete your account, all your data will be deleted. You cannot log in to or retrieve the deleted account. However you can create a new account with same credentials if you want..
         /// </summary>
         internal static string UserDeleteAccount_Action_Description_Text {
             get {

@@ -657,6 +657,8 @@
     </Compile>
     <Compile Update="Features\UserLogOut\Resources\Localization.Designer.cs">
       <DependentUpon>Localization.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Update="Features\Settings\Resources\Localization.Designer.cs">
       <DependentUpon>Localization.resx</DependentUpon>

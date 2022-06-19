@@ -259,7 +259,7 @@ namespace hBuddyApp.Features.CreateProfile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Special characters in username are not allowed.
+        ///   Looks up a localized string similar to Only Latin alphabet and numbers are allowed in Username.
         /// </summary>
         internal static string CreateProfileValidationException_Username_HasSpecialSymbolErrorText {
             get {
