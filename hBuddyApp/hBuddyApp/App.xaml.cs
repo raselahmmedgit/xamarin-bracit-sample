@@ -233,8 +233,8 @@ namespace hBuddyApp
             containerRegistry.RegisterSingleton<IPageBehaviorFactory, CustomPageBehaviorFactory>();
             containerRegistry.RegisterForNavigation<Features.Shell.ShellPage>();
 
-            containerRegistry.RegisterInstance<Client.Services.PlatformClientOptions>(
-                (new Client.Services.PlatformClientOptions(new Uri(Configuration.Constants.PlatformConstants.EndpointUrl))));
+            //containerRegistry.RegisterInstance<Client.Services.PlatformClientOptions>(
+            //    (new Client.Services.PlatformClientOptions(new Uri(Configuration.Constants.PlatformConstants.EndpointUrl))));
 
             RegisterMediator(containerRegistry);
             RegisterFeatures();

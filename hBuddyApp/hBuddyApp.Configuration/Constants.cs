@@ -25,10 +25,10 @@ namespace hBuddyApp.Configuration
             CacheExpirationConstants.MetadataExpirationTime = TimeSpan.FromMinutes(int.Parse(environmentConfiguration.GetValue("CacheExpirationConstants_MetadataExpirationTimeMinutes")));
         }
 
-        public static class PlatformConstants
-        {
-            public static readonly string EndpointUrl = Configuration.Helpers.Secrets.EndpointUrl;
-        }
+        //public static class PlatformConstants
+        //{
+        //    public static readonly string EndpointUrl = Configuration.Helpers.Secrets.EndpointUrl;
+        //}
 
         public static class AppCenterConstants
         {
@@ -54,10 +54,10 @@ namespace hBuddyApp.Configuration
             public static TimeSpan MetadataExpirationTime { get; internal set; }
         }
 
-        public static class HybridConstants
-        {
-            public static readonly string HybridEndpointUrl = Configuration.Helpers.Secrets.HybridEndpointUrl;
-        }
+        //public static class HybridConstants
+        //{
+        //    public static readonly string HybridEndpointUrl = Configuration.Helpers.Secrets.HybridEndpointUrl;
+        //}
 
         public static class PlatformAuthenticationConstants
         {

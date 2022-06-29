@@ -34,8 +34,8 @@
                         HeightRequest="32"/>
                 </Grid>
                 <Grid Grid.Row="1">
-                    <components:ComponentsHost Style="{StaticResource ContentPageCollectionStyle}"
-                        RegionManager="{Binding HomeRegion}"/>
+                    <!--<components:ComponentsHost Style="{StaticResource ContentPageCollectionStyle}"
+                        RegionManager="{Binding HomeRegion}"/>-->
                 </Grid>
             </Grid>
         </Grid>

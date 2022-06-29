@@ -42,7 +42,7 @@ namespace hBuddyApp.Features.Newsfeed
             containerRegistry.Register<HealthStatusAdviceComponentService>();
             containerRegistry.Register<NewsComponentService>();
 
-            RegionManager.RegisterFunctionalityToTheRegion<NewsComponentService>(NewsfeedViewModel.HomeRegionIdentifier, new NewsDataTemplateProvider());
+            //RegionManager.RegisterFunctionalityToTheRegion<NewsComponentService>(NewsfeedViewModel.HomeRegionIdentifier, new NewsDataTemplateProvider());
         }
     }
 }

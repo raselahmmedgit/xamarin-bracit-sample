@@ -25,13 +25,13 @@ namespace hBuddyApp.Features.Newsfeed
 {
     public class NewsfeedViewModel : CompositeViewModelBase
     {
-        public const string HomeRegionIdentifier = nameof(HomeRegionIdentifier);
+        //public const string HomeRegionIdentifier = nameof(HomeRegionIdentifier);
 
         public NewsfeedViewModel(
             INavigationService navigationService)
             : base(navigationService)
         {
-            HomeRegion = RegionManager.CreateForIdentifier(HomeRegionIdentifier, HostContext);
+            //HomeRegion = RegionManager.CreateForIdentifier(HomeRegionIdentifier, HostContext);
         }
 
         public override void OnActivated(CompositeDisposable lifecycleDisposable)
@@ -41,6 +41,6 @@ namespace hBuddyApp.Features.Newsfeed
             AnalyticsProvider.Instance.LogViewModel(nameof(NewsfeedViewModel));
         }
 
-        public RegionManager HomeRegion { get; }
+        //public RegionManager HomeRegion { get; }
     }
 }

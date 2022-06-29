@@ -50,7 +50,7 @@ namespace hBuddyApp.Client.Services
                 if (_endpointsClient == null)
                 {
                     var service = new Platform.PlatformEndpoints(_httpClient, true);
-                    service.BaseUri = new Uri(Configuration.Constants.PlatformConstants.EndpointUrl);
+                    //service.BaseUri = new Uri(Configuration.Constants.PlatformConstants.EndpointUrl);
                     _endpointsClient = service;
                 }
 
